@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sarakat Agency | Digital Marketing & Business Solutions</title>
-  <meta name="description" content="Sarakat Agency provides Digital Marketing, Social Media Management, Website Development and complete business solutions.">
+
+  <meta
+    name="description"
+    content="Sarakat Agency - Digital Marketing, Social Media, Website, Printing and Business Solutions."
+  >
 
   <style>
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +28,12 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Arial,
+        "Noto Sans Bengali",
+        "Noto Sans",
+        sans-serif;
+
       background: #f6f8fc;
       color: #172033;
       line-height: 1.6;
@@ -30,17 +44,25 @@
       color: inherit;
     }
 
-    button {
+    button,
+    input,
+    select,
+    textarea {
       font-family: inherit;
     }
 
-    /* =========================
+    button {
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
        TOP BAR
-    ========================= */
+    ========================================================= */
 
     .topbar {
       background: #111827;
-      color: #fff;
+      color: #ffffff;
       padding: 9px 5%;
       font-size: 13px;
     }
@@ -48,9 +70,11 @@
     .topbar-inner {
       max-width: 1250px;
       margin: auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 20px;
     }
 
@@ -60,27 +84,36 @@
       color: #dbe4f0;
     }
 
-    /* =========================
+
+    /* =========================================================
        NAVBAR
-    ========================= */
+    ========================================================= */
 
     header {
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
+
       border-bottom: 1px solid #e5e7eb;
+
       position: sticky;
       top: 0;
+
       z-index: 1000;
+
       backdrop-filter: blur(12px);
     }
 
     .navbar {
       max-width: 1250px;
       margin: auto;
+
       min-height: 72px;
+
       padding: 0 5%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
@@ -88,22 +121,36 @@
       display: flex;
       align-items: center;
       gap: 10px;
+
       font-size: 24px;
       font-weight: 900;
+
       color: #111827;
+
       white-space: nowrap;
     }
 
     .logo-mark {
       width: 40px;
       height: 40px;
+
       border-radius: 12px;
-      background: linear-gradient(135deg,#2563eb,#7c3aed);
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #7c3aed
+        );
+
       display: grid;
       place-items: center;
+
       color: white;
       font-weight: 900;
-      box-shadow: 0 8px 20px rgba(37,99,235,.25);
+
+      box-shadow:
+        0 8px 20px rgba(37,99,235,.25);
     }
 
     nav {
@@ -115,7 +162,9 @@
     nav a {
       font-size: 14px;
       font-weight: 700;
+
       color: #475569;
+
       transition: .25s;
     }
 
@@ -125,74 +174,123 @@
 
     .nav-btn {
       padding: 11px 18px;
-      border-radius: 10px;
-      background: #2563eb;
-      color: #fff !important;
-    }
 
-    .nav-btn:hover {
-      background: #1d4ed8;
+      border-radius: 10px;
+
+      background: #2563eb;
+
+      color: #fff !important;
     }
 
     .menu-btn {
       display: none;
+
       border: 0;
+
       background: #eff6ff;
+
       width: 42px;
       height: 42px;
+
       border-radius: 10px;
+
       font-size: 22px;
-      cursor: pointer;
     }
 
-    /* =========================
+
+    /* =========================================================
        HERO
-    ========================= */
+    ========================================================= */
 
     .hero {
+
       background:
-        radial-gradient(circle at 10% 20%, rgba(37,99,235,.13), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(124,58,237,.12), transparent 30%),
-        #fff;
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(37,99,235,.13),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(124,58,237,.12),
+          transparent 30%
+        ),
+
+        #ffffff;
+
       padding: 85px 5% 75px;
+
       overflow: hidden;
     }
 
     .hero-inner {
+
       max-width: 1250px;
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
+
+      grid-template-columns:
+        1.15fr
+        .85fr;
+
       align-items: center;
+
       gap: 60px;
     }
 
     .badge {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
+
       padding: 8px 14px;
+
       background: #eff6ff;
+
       border: 1px solid #dbeafe;
+
       color: #1d4ed8;
+
       border-radius: 50px;
+
       font-size: 13px;
+
       font-weight: 800;
+
       margin-bottom: 20px;
     }
 
     .badge span {
+
       width: 8px;
       height: 8px;
+
       background: #22c55e;
+
       border-radius: 50%;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 6vw, 70px);
+
+      font-size:
+        clamp(
+          40px,
+          6vw,
+          70px
+        );
+
       line-height: 1.05;
+
       letter-spacing: -2px;
+
       margin-bottom: 22px;
+
       color: #111827;
     }
 
@@ -201,79 +299,126 @@
     }
 
     .hero p {
+
       font-size: 18px;
+
       max-width: 650px;
+
       color: #64748b;
+
       margin-bottom: 30px;
     }
 
     .hero-actions {
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 13px;
     }
 
     .btn {
+
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
+
       gap: 8px;
+
       padding: 14px 22px;
+
       border-radius: 12px;
+
       border: 1px solid transparent;
+
       font-weight: 800;
+
       font-size: 14px;
+
       transition: .25s;
-      cursor: pointer;
     }
 
     .btn-primary {
+
       background: #2563eb;
-      color: #fff;
-      box-shadow: 0 12px 25px rgba(37,99,235,.20);
+
+      color: #ffffff;
+
+      box-shadow:
+        0 12px 25px rgba(37,99,235,.20);
     }
 
     .btn-primary:hover {
+
       transform: translateY(-2px);
+
       background: #1d4ed8;
     }
 
     .btn-light {
-      background: #fff;
+
+      background: #ffffff;
+
       color: #1e293b;
+
       border-color: #dbe2ea;
     }
 
     .btn-light:hover {
+
       border-color: #2563eb;
+
       color: #2563eb;
     }
 
-    .hero-card {
-      background: #111827;
-      border-radius: 28px;
-      padding: 30px;
+    .btn-success {
+      background: #16a34a;
       color: #fff;
-      box-shadow: 0 30px 70px rgba(15,23,42,.20);
+    }
+
+    .btn-success:hover {
+      background: #15803d;
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #020617;
+    }
+
+
+    /* HERO CARD */
+
+    .hero-card {
+
+      background: #111827;
+
+      border-radius: 28px;
+
+      padding: 30px;
+
+      color: #fff;
+
+      box-shadow:
+        0 30px 70px rgba(15,23,42,.20);
+
       position: relative;
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: rgba(37,99,235,.25);
-      top: -45px;
-      right: -40px;
-      filter: blur(3px);
-    }
-
     .hero-card-top {
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
+
       margin-bottom: 25px;
     }
 
@@ -282,60 +427,91 @@
     }
 
     .verified {
+
       background: #2563eb;
+
       width: 34px;
       height: 34px;
+
       display: grid;
+
       place-items: center;
+
       border-radius: 50%;
+
       font-weight: bold;
     }
 
     .hero-price {
+
       font-size: 38px;
+
       font-weight: 900;
+
       margin: 8px 0;
     }
 
     .hero-list {
+
       list-style: none;
+
       margin: 25px 0;
     }
 
     .hero-list li {
+
       padding: 8px 0;
+
       color: #dbe4f0;
+
       font-size: 14px;
     }
 
     .hero-list li::before {
+
       content: "✓";
+
       color: #4ade80;
+
       font-weight: bold;
+
       margin-right: 10px;
     }
 
-    /* =========================
+
+    /* =========================================================
        STATS
-    ========================= */
+    ========================================================= */
 
     .stats {
+
       padding: 20px 5%;
-      background: #fff;
+
+      background: #ffffff;
+
       border-bottom: 1px solid #e5e7eb;
     }
 
     .stats-grid {
+
       max-width: 1100px;
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       text-align: center;
     }
 
     .stat {
+
       padding: 20px;
-      border-right: 1px solid #e5e7eb;
+
+      border-right:
+        1px solid #e5e7eb;
     }
 
     .stat:last-child {
@@ -343,90 +519,141 @@
     }
 
     .stat h3 {
+
       font-size: 28px;
+
       color: #111827;
     }
 
     .stat p {
+
       font-size: 13px;
+
       color: #64748b;
     }
 
-    /* =========================
-       COMMON SECTION
-    ========================= */
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
 
     section {
       padding: 85px 5%;
     }
 
     .container {
+
       max-width: 1250px;
+
       margin: auto;
     }
 
     .section-heading {
+
       max-width: 720px;
-      margin: 0 auto 45px;
+
+      margin:
+        0 auto 45px;
+
       text-align: center;
     }
 
     .section-label {
+
       color: #2563eb;
+
       font-size: 13px;
+
       font-weight: 900;
+
       letter-spacing: 1px;
+
       text-transform: uppercase;
+
       margin-bottom: 9px;
     }
 
     .section-heading h2 {
-      font-size: clamp(30px,4vw,45px);
+
+      font-size:
+        clamp(
+          30px,
+          4vw,
+          45px
+        );
+
       line-height: 1.15;
+
       margin-bottom: 14px;
+
       color: #111827;
     }
 
     .section-heading p {
+
       color: #64748b;
     }
 
-    /* =========================
+
+    /* =========================================================
        SERVICES
-    ========================= */
+    ========================================================= */
 
     .services {
       background: #f6f8fc;
     }
 
     .service-grid {
+
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 18px;
     }
 
     .service-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
+
+      background: #ffffff;
+
+      border:
+        1px solid #e5e7eb;
+
       border-radius: 18px;
+
       padding: 27px;
+
       transition: .25s;
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
+
+      transform:
+        translateY(-5px);
+
       border-color: #bfdbfe;
-      box-shadow: 0 20px 40px rgba(15,23,42,.07);
+
+      box-shadow:
+        0 20px 40px
+        rgba(15,23,42,.07);
     }
 
     .service-icon {
+
       width: 52px;
       height: 52px;
+
       border-radius: 14px;
+
       display: grid;
+
       place-items: center;
+
       background: #eff6ff;
+
       font-size: 25px;
+
       margin-bottom: 18px;
     }
 
@@ -435,114 +662,182 @@
     }
 
     .service-card p {
+
       color: #64748b;
+
       font-size: 14px;
     }
 
-    /* =========================
+
+    /* =========================================================
        PACKAGES
-    ========================= */
+    ========================================================= */
 
     .packages {
-      background: #fff;
+      background: #ffffff;
     }
 
     .package-grid {
+
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 20px;
+
       align-items: stretch;
     }
 
     .package {
-      border: 1px solid #e2e8f0;
-      background: #fff;
+
+      border:
+        1px solid #e2e8f0;
+
+      background: #ffffff;
+
       border-radius: 22px;
+
       padding: 30px;
+
       position: relative;
+
       display: flex;
+
       flex-direction: column;
+
       transition: .25s;
     }
 
     .package:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 55px rgba(15,23,42,.09);
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 25px 55px
+        rgba(15,23,42,.09);
     }
 
     .package.featured {
-      border: 2px solid #2563eb;
-      box-shadow: 0 20px 50px rgba(37,99,235,.12);
+
+      border:
+        2px solid #2563eb;
+
+      box-shadow:
+        0 20px 50px
+        rgba(37,99,235,.12);
     }
 
     .popular {
+
       position: absolute;
+
       top: 17px;
+
       right: 17px;
+
       background: #2563eb;
-      color: #fff;
-      padding: 6px 10px;
+
+      color: #ffffff;
+
+      padding:
+        6px 10px;
+
       border-radius: 20px;
+
       font-size: 10px;
+
       font-weight: 900;
     }
 
     .package-icon {
+
       font-size: 30px;
+
       margin-bottom: 15px;
     }
 
     .package h3 {
+
       font-size: 23px;
+
       margin-bottom: 4px;
     }
 
     .package-for {
+
       color: #64748b;
+
       font-size: 13px;
+
       min-height: 42px;
     }
 
     .price {
+
       margin: 20px 0;
+
       padding: 17px 0;
-      border-top: 1px solid #e5e7eb;
-      border-bottom: 1px solid #e5e7eb;
+
+      border-top:
+        1px solid #e5e7eb;
+
+      border-bottom:
+        1px solid #e5e7eb;
     }
 
     .price small {
+
       color: #64748b;
+
       font-size: 12px;
     }
 
     .price strong {
+
       display: block;
+
       font-size: 32px;
+
       color: #111827;
     }
 
     .duration {
+
       color: #2563eb;
+
       font-size: 13px;
+
       font-weight: 800;
     }
 
     .package ul {
+
       list-style: none;
+
       margin: 5px 0 25px;
+
       flex: 1;
     }
 
     .package li {
+
       font-size: 14px;
+
       padding: 8px 0;
+
       color: #475569;
     }
 
     .package li::before {
+
       content: "✓";
+
       color: #16a34a;
+
       font-weight: 900;
+
       margin-right: 9px;
     }
 
@@ -550,92 +845,201 @@
       width: 100%;
     }
 
-    /* =========================
-       PROCESS
-    ========================= */
 
-    .process {
+    /* =========================================================
+       PRINT & DIGITAL SERVICE
+    ========================================================= */
+
+    .print-services {
+
       background: #f8fafc;
     }
 
-    .process-grid {
+    .print-grid {
+
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 18px;
+    }
+
+    .print-card {
+
+      background: #ffffff;
+
+      border:
+        1px solid #e5e7eb;
+
+      border-radius: 18px;
+
+      padding: 25px;
+
+      transition: .25s;
+    }
+
+    .print-card:hover {
+
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 20px 40px
+        rgba(15,23,42,.07);
+    }
+
+    .print-card .print-icon {
+
+      font-size: 32px;
+
+      margin-bottom: 12px;
+    }
+
+    .print-card h3 {
+      margin-bottom: 7px;
+    }
+
+    .print-card p {
+
+      color: #64748b;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process {
+      background: #ffffff;
+    }
+
+    .process-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap: 18px;
     }
 
     .process-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
+
+      background: #f8fafc;
+
+      border:
+        1px solid #e5e7eb;
+
       border-radius: 18px;
+
       padding: 25px;
-      position: relative;
     }
 
     .step-number {
+
       width: 38px;
       height: 38px;
+
       display: grid;
+
       place-items: center;
+
       border-radius: 50%;
+
       background: #eff6ff;
+
       color: #2563eb;
+
       font-weight: 900;
+
       margin-bottom: 17px;
     }
 
     .process-card p {
+
       color: #64748b;
+
       font-size: 14px;
+
       margin-top: 8px;
     }
 
-    /* =========================
+
+    /* =========================================================
        WHY US
-    ========================= */
+    ========================================================= */
 
     .why-grid {
+
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+
+      grid-template-columns:
+        .9fr 1.1fr;
+
       gap: 55px;
+
       align-items: center;
     }
 
     .why-box {
+
       background: #111827;
+
       border-radius: 28px;
+
       padding: 40px;
+
       color: white;
     }
 
     .why-box h2 {
+
       font-size: 40px;
+
       line-height: 1.15;
+
       margin-bottom: 18px;
     }
 
     .why-box p {
+
       color: #cbd5e1;
     }
 
     .why-list {
+
       display: grid;
+
       gap: 18px;
     }
 
     .why-item {
+
       display: flex;
+
       gap: 15px;
     }
 
     .why-check {
-      flex: 0 0 42px;
+
+      flex:
+        0 0 42px;
+
       height: 42px;
+
       background: #eff6ff;
+
       color: #2563eb;
+
       border-radius: 12px;
+
       display: grid;
+
       place-items: center;
+
       font-weight: 900;
     }
 
@@ -644,106 +1048,494 @@
     }
 
     .why-item p {
+
       color: #64748b;
+
       font-size: 14px;
     }
 
-    /* =========================
+
+    /* =========================================================
        PORTFOLIO
-    ========================= */
+    ========================================================= */
 
     .portfolio {
       background: #f8fafc;
     }
 
     .portfolio-grid {
+
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 20px;
     }
 
     .portfolio-card {
+
       min-height: 260px;
+
       border-radius: 22px;
+
       padding: 25px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: flex-end;
-      color: #fff;
+
+      color: #ffffff;
+
       overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg,#1d4ed8,#7c3aed);
+
+      background:
+        linear-gradient(
+          135deg,
+          #1d4ed8,
+          #7c3aed
+        );
     }
 
     .portfolio-card:nth-child(2) {
-      background: linear-gradient(135deg,#0f766e,#0891b2);
+
+      background:
+        linear-gradient(
+          135deg,
+          #0f766e,
+          #0891b2
+        );
     }
 
     .portfolio-card:nth-child(3) {
-      background: linear-gradient(135deg,#9f1239,#ea580c);
+
+      background:
+        linear-gradient(
+          135deg,
+          #9f1239,
+          #ea580c
+        );
     }
 
     .portfolio-card span {
+
       font-size: 12px;
+
       opacity: .8;
     }
 
     .portfolio-card h3 {
+
       font-size: 23px;
+
       margin-top: 5px;
     }
 
-    /* =========================
+
+    /* =========================================================
+       PAYMENT
+    ========================================================= */
+
+    .payment {
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #f8fafc
+        );
+    }
+
+    .payment-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .8fr 1.2fr;
+
+      gap: 25px;
+
+      align-items: start;
+    }
+
+    .payment-summary {
+
+      background: #111827;
+
+      color: #ffffff;
+
+      border-radius: 22px;
+
+      padding: 30px;
+
+      position: sticky;
+
+      top: 100px;
+    }
+
+    .payment-summary h3 {
+
+      font-size: 25px;
+
+      margin-bottom: 20px;
+    }
+
+    .selected-package {
+
+      background: #1e293b;
+
+      border-radius: 15px;
+
+      padding: 20px;
+
+      margin-bottom: 20px;
+    }
+
+    .selected-package small {
+      color: #94a3b8;
+    }
+
+    .selected-package h4 {
+
+      font-size: 21px;
+
+      margin: 5px 0;
+    }
+
+    .selected-price {
+
+      font-size: 32px;
+
+      font-weight: 900;
+
+      color: #60a5fa;
+    }
+
+    .summary-row {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 10px 0;
+
+      border-bottom:
+        1px solid #334155;
+
+      color: #cbd5e1;
+
+      font-size: 14px;
+    }
+
+    .summary-total {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-top: 18px;
+
+      font-size: 20px;
+
+      font-weight: 900;
+    }
+
+
+    /* PAYMENT FORM */
+
+    .payment-form {
+
+      background: #ffffff;
+
+      border:
+        1px solid #e2e8f0;
+
+      border-radius: 22px;
+
+      padding: 30px;
+
+      box-shadow:
+        0 15px 45px
+        rgba(15,23,42,.05);
+    }
+
+    .payment-form h3 {
+
+      font-size: 25px;
+
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+
+      display: block;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      margin-bottom: 6px;
+
+      color: #334155;
+    }
+
+    .form-row {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+
+      width: 100%;
+
+      padding: 14px 15px;
+
+      border:
+        1px solid #dbe2ea;
+
+      border-radius: 11px;
+
+      outline: none;
+
+      background: #ffffff;
+
+      font-size: 14px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+
+      border-color: #2563eb;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(37,99,235,.08);
+    }
+
+    textarea {
+
+      min-height: 100px;
+
+      resize: vertical;
+    }
+
+
+    /* PAYMENT METHODS */
+
+    .payment-methods {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 10px;
+
+      margin: 8px 0 18px;
+    }
+
+    .payment-method {
+
+      border:
+        1px solid #dbe2ea;
+
+      border-radius: 12px;
+
+      padding: 13px;
+
+      text-align: center;
+
+      cursor: pointer;
+
+      transition: .2s;
+    }
+
+    .payment-method:hover {
+
+      border-color: #2563eb;
+    }
+
+    .payment-method.active {
+
+      border:
+        2px solid #2563eb;
+
+      background: #eff6ff;
+    }
+
+    .payment-method strong {
+
+      display: block;
+
+      font-size: 14px;
+
+      margin-top: 4px;
+    }
+
+    .payment-method small {
+
+      color: #64748b;
+
+      font-size: 11px;
+    }
+
+    .payment-instruction {
+
+      background: #f8fafc;
+
+      border:
+        1px solid #e2e8f0;
+
+      border-radius: 14px;
+
+      padding: 17px;
+
+      margin-bottom: 18px;
+
+      display: none;
+    }
+
+    .payment-instruction.active {
+      display: block;
+    }
+
+    .payment-instruction strong {
+      color: #111827;
+    }
+
+    .payment-number {
+
+      font-size: 20px;
+
+      font-weight: 900;
+
+      margin-top: 5px;
+
+      color: #2563eb;
+    }
+
+    .notice {
+
+      background: #fff7ed;
+
+      border:
+        1px solid #fed7aa;
+
+      color: #9a3412;
+
+      border-radius: 12px;
+
+      padding: 13px;
+
+      font-size: 13px;
+
+      margin-bottom: 18px;
+    }
+
+
+    /* =========================================================
        CTA
-    ========================= */
+    ========================================================= */
 
     .cta {
       padding: 70px 5%;
     }
 
     .cta-box {
+
       max-width: 1150px;
+
       margin: auto;
-      background: linear-gradient(135deg,#111827,#1e3a8a);
+
+      background:
+        linear-gradient(
+          135deg,
+          #111827,
+          #1e3a8a
+        );
+
       color: white;
+
       border-radius: 28px;
+
       padding: 55px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .cta-box h2 {
-      font-size: clamp(30px,4vw,45px);
+
+      font-size:
+        clamp(
+          30px,
+          4vw,
+          45px
+        );
+
       line-height: 1.15;
+
       margin-bottom: 10px;
     }
 
     .cta-box p {
+
       color: #cbd5e1;
+
       max-width: 650px;
     }
 
-    /* =========================
+
+    /* =========================================================
        CONTACT
-    ========================= */
+    ========================================================= */
 
     .contact {
-      background: #fff;
+      background: #ffffff;
     }
 
     .contact-grid {
+
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
+
+      grid-template-columns:
+        .8fr 1.2fr;
+
       gap: 30px;
     }
 
     .contact-info,
     .contact-form {
+
       background: #f8fafc;
-      border: 1px solid #e5e7eb;
+
+      border:
+        1px solid #e5e7eb;
+
       border-radius: 22px;
+
       padding: 30px;
     }
 
@@ -752,8 +1544,11 @@
     }
 
     .contact-item {
+
       padding: 15px 0;
-      border-bottom: 1px solid #e2e8f0;
+
+      border-bottom:
+        1px solid #e2e8f0;
     }
 
     .contact-item:last-child {
@@ -761,61 +1556,40 @@
     }
 
     .contact-item small {
+
       color: #64748b;
+
       display: block;
+
       margin-bottom: 3px;
     }
 
-    form {
-      display: grid;
-      gap: 15px;
-    }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 14px 15px;
-      border: 1px solid #dbe2ea;
-      border-radius: 11px;
-      outline: none;
-      font-family: inherit;
-      background: #fff;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37,99,235,.08);
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    /* =========================
+    /* =========================================================
        FOOTER
-    ========================= */
+    ========================================================= */
 
     footer {
+
       background: #0b1120;
-      color: #fff;
-      padding: 50px 5% 25px;
+
+      color: #ffffff;
+
+      padding:
+        50px 5% 25px;
     }
 
     .footer-grid {
+
       max-width: 1250px;
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
       gap: 35px;
     }
 
@@ -826,68 +1600,250 @@
 
     footer p,
     footer a {
+
       color: #94a3b8;
+
       font-size: 14px;
     }
 
     footer a {
+
       display: block;
+
       margin: 8px 0;
     }
 
     footer a:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
     .footer-bottom {
+
       max-width: 1250px;
-      margin: 35px auto 0;
+
+      margin:
+        35px auto 0;
+
       padding-top: 20px;
-      border-top: 1px solid #1e293b;
+
+      border-top:
+        1px solid #1e293b;
+
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
+
       color: #64748b;
+
       font-size: 13px;
     }
 
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
 
-    .whatsapp {
+    /* =========================================================
+       FLOATING BUTTONS
+    ========================================================= */
+
+    .floating-buttons {
+
       position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: #22c55e;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 26px;
-      box-shadow: 0 10px 30px rgba(34,197,94,.35);
+
+      right: 20px;
+
+      bottom: 20px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+
       z-index: 999;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    .floating {
 
-    @media(max-width: 1000px) {
+      width: 55px;
+      height: 55px;
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      color: #ffffff;
+
+      font-size: 24px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(15,23,42,.2);
+    }
+
+    .floating-whatsapp {
+      background: #22c55e;
+    }
+
+    .floating-print {
+      background: #2563eb;
+    }
+
+
+    /* =========================================================
+       MODAL
+    ========================================================= */
+
+    .modal {
+
+      position: fixed;
+
+      inset: 0;
+
+      background:
+        rgba(15,23,42,.72);
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 20px;
+
+      z-index: 2000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+
+      background: #ffffff;
+
+      width: 100%;
+
+      max-width: 520px;
+
+      max-height: 90vh;
+
+      overflow-y: auto;
+
+      border-radius: 22px;
+
+      padding: 30px;
+
+      position: relative;
+
+      box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+    }
+
+    .modal-close {
+
+      position: absolute;
+
+      top: 15px;
+
+      right: 18px;
+
+      border: 0;
+
+      background: #f1f5f9;
+
+      width: 35px;
+      height: 35px;
+
+      border-radius: 50%;
+
+      font-size: 20px;
+    }
+
+    .invoice {
+
+      border:
+        1px solid #e2e8f0;
+
+      border-radius: 15px;
+
+      padding: 20px;
+
+      margin: 20px 0;
+    }
+
+    .invoice-header {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding-bottom: 15px;
+
+      border-bottom:
+        1px solid #e2e8f0;
+    }
+
+    .invoice-row {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 10px 0;
+
+      border-bottom:
+        1px dashed #e2e8f0;
+    }
+
+    .invoice-total {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 20px;
+
+      font-weight: 900;
+
+      padding-top: 15px;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media(max-width:1000px) {
 
       nav {
+
         display: none;
+
         position: absolute;
+
         top: 72px;
+
         left: 0;
+
         width: 100%;
-        background: #fff;
+
+        background: #ffffff;
+
         padding: 20px 5%;
+
         flex-direction: column;
+
         align-items: stretch;
-        border-bottom: 1px solid #e5e7eb;
+
+        border-bottom:
+          1px solid #e5e7eb;
       }
 
       nav.active {
@@ -903,28 +1859,48 @@
       }
 
       .hero-inner,
-      .why-grid {
+      .why-grid,
+      .payment-grid {
+
         grid-template-columns: 1fr;
       }
 
       .service-grid,
       .package-grid,
       .portfolio-grid {
-        grid-template-columns: repeat(2,1fr);
+
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .print-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .process-grid {
-        grid-template-columns: repeat(2,1fr);
+
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .payment-summary {
+        position: static;
       }
 
       .footer-grid {
-        grid-template-columns: repeat(2,1fr);
+
+        grid-template-columns:
+          repeat(2,1fr);
       }
     }
 
-    @media(max-width: 650px) {
+
+    @media(max-width:650px) {
 
       .topbar-inner {
+
         justify-content: center;
       }
 
@@ -941,12 +1917,15 @@
       }
 
       .logo-mark {
+
         width: 36px;
         height: 36px;
       }
 
       .hero {
-        padding: 55px 5%;
+
+        padding:
+          55px 5%;
       }
 
       .hero h1 {
@@ -954,15 +1933,20 @@
       }
 
       section {
-        padding: 65px 5%;
+        padding:
+          65px 5%;
       }
 
       .stats-grid {
-        grid-template-columns: repeat(2,1fr);
+
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .stat {
-        border-bottom: 1px solid #e5e7eb;
+
+        border-bottom:
+          1px solid #e5e7eb;
       }
 
       .service-grid,
@@ -970,143 +1954,364 @@
       .process-grid,
       .portfolio-grid,
       .contact-grid,
-      .footer-grid {
+      .footer-grid,
+      .print-grid {
+
         grid-template-columns: 1fr;
       }
 
       .form-row {
+
+        grid-template-columns: 1fr;
+      }
+
+      .payment-methods {
+
         grid-template-columns: 1fr;
       }
 
       .cta-box {
+
         padding: 35px 25px;
+
         flex-direction: column;
+
         align-items: flex-start;
       }
 
       .footer-bottom {
+
         flex-direction: column;
       }
 
       .hero-card {
         padding: 25px;
       }
+
     }
+
+
+    /* =========================================================
+       PRINT STYLE
+    ========================================================= */
+
+    @media print {
+
+      body {
+        background: #ffffff;
+      }
+
+      header,
+      .topbar,
+      .floating-buttons,
+      footer,
+      .hero,
+      .stats,
+      .services,
+      .packages,
+      .print-services,
+      .process,
+      .portfolio,
+      .cta,
+      .contact,
+      .modal-close,
+      .no-print {
+
+        display: none !important;
+      }
+
+      .modal {
+
+        position: static;
+
+        display: block;
+
+        background: #ffffff;
+
+        padding: 0;
+      }
+
+      .modal-box {
+
+        max-width: 100%;
+
+        box-shadow: none;
+
+        border: 0;
+
+        padding: 0;
+      }
+
+      .invoice {
+
+        border: 1px solid #000;
+      }
+
+      .invoice-row {
+
+        border-bottom:
+          1px dashed #777;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+
+  <!-- ========================================================
        TOP BAR
-  ========================= -->
+  ========================================================= -->
 
   <div class="topbar">
+
     <div class="topbar-inner">
-      <div>🚀 Grow your business with Sarakat Agency</div>
+
+      <div>
+        🚀 Grow your business with Sarakat Agency
+      </div>
 
       <div class="topbar-right">
-        <span>📞 Business Support</span>
-        <span>💬 WhatsApp Available</span>
+
+        <span>
+          📞 01705633700
+        </span>
+
+        <span>
+          💬 WhatsApp Available
+        </span>
+
       </div>
+
     </div>
+
   </div>
 
 
-  <!-- =========================
+  <!-- ========================================================
        NAVBAR
-  ========================= -->
+  ========================================================= -->
 
   <header>
+
     <div class="navbar">
 
-      <a href="#home" class="logo">
-        <span class="logo-mark">S</span>
+      <a
+        href="#home"
+        class="logo"
+      >
+
+        <span class="logo-mark">
+          S
+        </span>
+
         SARAKAT
+
       </a>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
 
       <nav id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
-        <a href="#process">How It Works</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-btn">Get Started</a>
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#packages">
+          Packages
+        </a>
+
+        <a href="#print">
+          Print
+        </a>
+
+        <a href="#payment">
+          Payment
+        </a>
+
+        <a href="#portfolio">
+          Portfolio
+        </a>
+
+        <a
+          href="#contact"
+          class="nav-btn"
+        >
+          Get Started
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- =========================
+  <!-- ========================================================
        HERO
-  ========================= -->
+  ========================================================= -->
 
-  <section class="hero" id="home">
+  <section
+    class="hero"
+    id="home"
+  >
 
     <div class="hero-inner">
+
 
       <div>
 
         <div class="badge">
+
           <span></span>
+
           Digital Business Growth Agency
+
         </div>
 
+
         <h1>
-          Grow Your Business<br>
+
+          Grow Your Business
+
+          <br>
+
           With <strong>Sarakat</strong>
+
         </h1>
 
+
         <p>
-          Digital Marketing, Social Media, Website Development
-          এবং Business Solutions — সবকিছু এক জায়গায়।
-          আপনার প্রয়োজন অনুযায়ী package বেছে নিয়ে শুরু করুন।
+
+          Digital Marketing, Social Media,
+          Website, Printing এবং Business Solutions —
+          সবকিছু এক জায়গায়।
+
+          আপনার প্রয়োজন অনুযায়ী package বেছে
+          নিয়ে সরাসরি শুরু করুন।
+
         </p>
 
+
         <div class="hero-actions">
-          <a href="#packages" class="btn btn-primary">
+
+          <a
+            href="#packages"
+            class="btn btn-primary"
+          >
             View Packages →
           </a>
 
-          <a href="#contact" class="btn btn-light">
-            Talk to Sarakat
+
+          <a
+            href="#payment"
+            class="btn btn-light"
+          >
+            💳 Payment
           </a>
+
+
+          <a
+            href="https://wa.me/8801705633700"
+            target="_blank"
+            class="btn btn-success"
+          >
+            WhatsApp
+          </a>
+
         </div>
 
       </div>
 
 
+      <!-- HERO CARD -->
+
       <div class="hero-card">
 
         <div class="hero-card-top">
+
           <div>
-            <small>Most Popular</small>
-            <h3>Starter Ads</h3>
+
+            <small>
+              Most Popular
+            </small>
+
+            <h3>
+              Starter Ads
+            </h3>
+
           </div>
 
-          <div class="verified">✓</div>
+
+          <div class="verified">
+            ✓
+          </div>
+
         </div>
 
-        <small>Starting from</small>
 
-        <div class="hero-price">৳9,000</div>
+        <small>
+          Starting from
+        </small>
 
-        <small>7 Days Campaign</small>
+
+        <div class="hero-price">
+          ৳9,000
+        </div>
+
+
+        <small>
+          7 Days Campaign
+        </small>
+
 
         <ul class="hero-list">
-          <li>Facebook Ads Campaign Setup</li>
-          <li>Location & Audience Targeting</li>
-          <li>7 Days Monitoring</li>
-          <li>Performance Report</li>
+
+          <li>
+            Facebook Ads Campaign Setup
+          </li>
+
+          <li>
+            Location & Audience Targeting
+          </li>
+
+          <li>
+            7 Days Monitoring
+          </li>
+
+          <li>
+            Performance Report
+          </li>
+
         </ul>
 
-        <a href="#contact" class="btn btn-primary">
-          Get Started →
-        </a>
+
+        <button
+          class="btn btn-primary"
+          onclick="selectPackage(
+            'Starter Ads',
+            9000,
+            '7 Days'
+          )"
+        >
+
+          Choose Package →
+
+        </button>
 
       </div>
 
@@ -1115,32 +2320,63 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        STATS
-  ========================= -->
+  ========================================================= -->
 
   <div class="stats">
 
     <div class="stats-grid">
 
       <div class="stat">
-        <h3>01</h3>
-        <p>Complete Agency</p>
+
+        <h3>
+          06+
+        </h3>
+
+        <p>
+          Business Packages
+        </p>
+
       </div>
 
-      <div class="stat">
-        <h3>06+</h3>
-        <p>Business Solutions</p>
-      </div>
 
       <div class="stat">
-        <h3>24/7</h3>
-        <p>Support Approach</p>
+
+        <h3>
+          04+
+        </h3>
+
+        <p>
+          Digital Services
+        </p>
+
       </div>
 
+
       <div class="stat">
-        <h3>100%</h3>
-        <p>Client Focused</p>
+
+        <h3>
+          24/7
+        </h3>
+
+        <p>
+          Support Approach
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          100%
+        </h3>
+
+        <p>
+          Client Focused
+        </p>
+
       </div>
 
     </div>
@@ -1148,80 +2384,143 @@
   </div>
 
 
-  <!-- =========================
+  <!-- ========================================================
        SERVICES
-  ========================= -->
+  ========================================================= -->
 
-  <section class="services" id="services">
+  <section
+    class="services"
+    id="services"
+  >
 
     <div class="container">
 
       <div class="section-heading">
-        <div class="section-label">Our Services</div>
 
-        <h2>Everything Your Business Needs</h2>
+        <div class="section-label">
+          Our Services
+        </div>
+
+        <h2>
+          Everything Your Business Needs
+        </h2>
 
         <p>
-          আপনার business online-এ grow করার জন্য প্রয়োজনীয়
-          গুরুত্বপূর্ণ digital services এক জায়গায়।
+          আপনার business online-এ grow করার জন্য
+          প্রয়োজনীয় digital এবং business services।
         </p>
+
       </div>
 
 
       <div class="service-grid">
 
-        <div class="service-card">
-          <div class="service-icon">📢</div>
-          <h3>Digital Marketing</h3>
-          <p>
-            Facebook Ads, campaign setup, audience targeting,
-            monitoring এবং performance-focused marketing।
-          </p>
-        </div>
 
         <div class="service-card">
-          <div class="service-icon">📱</div>
-          <h3>Social Media</h3>
+
+          <div class="service-icon">
+            📢
+          </div>
+
+          <h3>
+            Digital Marketing
+          </h3>
+
           <p>
-            Facebook page management, content planning,
-            post design এবং brand presence management।
+            Facebook Ads, campaign setup,
+            audience targeting এবং monitoring।
           </p>
+
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">🌐</div>
-          <h3>Website Development</h3>
-          <p>
-            Modern responsive business website, landing page,
-            product website এবং maintenance service।
-          </p>
-        </div>
 
         <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>Creative Design</h3>
+
+          <div class="service-icon">
+            📱
+          </div>
+
+          <h3>
+            Social Media
+          </h3>
+
           <p>
-            Social media post, banner, promotional creative,
-            campaign design এবং brand visuals।
+            Facebook page management,
+            content planning ও post design।
           </p>
+
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">📈</div>
-          <h3>Business Growth</h3>
-          <p>
-            Business visibility, online presence এবং customer
-            acquisition-এর জন্য digital strategy।
-          </p>
-        </div>
 
         <div class="service-card">
-          <div class="service-icon">🤝</div>
-          <h3>Business Support</h3>
+
+          <div class="service-icon">
+            🌐
+          </div>
+
+          <h3>
+            Website Development
+          </h3>
+
           <p>
-            আপনার প্রয়োজন অনুযায়ী digital solution,
-            consultation এবং ongoing support।
+            Modern responsive business website,
+            landing page ও online presence।
           </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🎨
+          </div>
+
+          <h3>
+            Creative Design
+          </h3>
+
+          <p>
+            Social media post, banner,
+            promotional creative এবং branding।
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🖨️
+          </div>
+
+          <h3>
+            Printing Service
+          </h3>
+
+          <p>
+            Visiting card, flyer, banner,
+            poster এবং বিভিন্ন business print material।
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🤝
+          </div>
+
+          <h3>
+            Business Support
+          </h3>
+
+          <p>
+            Digital solution, consultation এবং
+            ongoing business support।
+          </p>
+
         </div>
 
       </div>
@@ -1231,23 +2530,31 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        PACKAGES
-  ========================= -->
+  ========================================================= -->
 
-  <section class="packages" id="packages">
+  <section
+    class="packages"
+    id="packages"
+  >
 
     <div class="container">
 
+
       <div class="section-heading">
 
-        <div class="section-label">Simple Packages</div>
+        <div class="section-label">
+          Simple Packages
+        </div>
 
-        <h2>Choose Your Business Package</h2>
+        <h2>
+          Choose Your Business Package
+        </h2>
 
         <p>
-          Customer যেন আগে প্রশ্ন না করেও বুঝতে পারে—
-          কোন package কার জন্য, কী কী আছে এবং কত budget থেকে শুরু।
+          Package দেখে customer নিজেই service,
+          duration এবং starting price বুঝতে পারবেন।
         </p>
 
       </div>
@@ -1260,31 +2567,70 @@
 
         <div class="package">
 
-          <div class="package-icon">🟢</div>
+          <div class="package-icon">
+            🟢
+          </div>
 
-          <h3>Starter Ads</h3>
+          <h3>
+            Starter Ads
+          </h3>
 
           <p class="package-for">
             ছোট Local Business-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳9,000</strong>
-            <span class="duration">7 Days</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳9,000
+            </strong>
+
+            <span class="duration">
+              7 Days
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Facebook Ads Campaign Setup</li>
-            <li>Location Targeting</li>
-            <li>Audience Targeting</li>
-            <li>7 Days Monitoring</li>
-            <li>Performance Report</li>
+
+            <li>
+              Facebook Ads Campaign Setup
+            </li>
+
+            <li>
+              Location Targeting
+            </li>
+
+            <li>
+              Audience Targeting
+            </li>
+
+            <li>
+              7 Days Monitoring
+            </li>
+
+            <li>
+              Performance Report
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Starter Ads',
+              9000,
+              '7 Days'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1293,34 +2639,78 @@
 
         <div class="package featured">
 
-          <div class="popular">POPULAR</div>
+          <div class="popular">
+            POPULAR
+          </div>
 
-          <div class="package-icon">🔵</div>
+          <div class="package-icon">
+            🔵
+          </div>
 
-          <h3>Growth</h3>
+          <h3>
+            Growth
+          </h3>
 
           <p class="package-for">
             Growing Business-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳15,000</strong>
-            <span class="duration">14 Days</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳15,000
+            </strong>
+
+            <span class="duration">
+              14 Days
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Ads Campaign Setup</li>
-            <li>Audience & Location Targeting</li>
-            <li>Creative Guidance</li>
-            <li>Campaign Optimization</li>
-            <li>Performance Monitoring</li>
-            <li>Campaign Report</li>
+
+            <li>
+              Ads Campaign Setup
+            </li>
+
+            <li>
+              Audience & Location Targeting
+            </li>
+
+            <li>
+              Creative Guidance
+            </li>
+
+            <li>
+              Campaign Optimization
+            </li>
+
+            <li>
+              Performance Monitoring
+            </li>
+
+            <li>
+              Campaign Report
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Growth',
+              15000,
+              '14 Days'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1329,32 +2719,74 @@
 
         <div class="package">
 
-          <div class="package-icon">🟣</div>
+          <div class="package-icon">
+            🟣
+          </div>
 
-          <h3>Business Pro</h3>
+          <h3>
+            Business Pro
+          </h3>
 
           <p class="package-for">
             Established Business-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳30,000</strong>
-            <span class="duration">30 Days</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳30,000
+            </strong>
+
+            <span class="duration">
+              30 Days
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Multiple Campaign</li>
-            <li>Advanced Targeting</li>
-            <li>Campaign Optimization</li>
-            <li>Creative Guidance</li>
-            <li>Regular Monitoring</li>
-            <li>Monthly Performance Report</li>
+
+            <li>
+              Multiple Campaign
+            </li>
+
+            <li>
+              Advanced Targeting
+            </li>
+
+            <li>
+              Campaign Optimization
+            </li>
+
+            <li>
+              Creative Guidance
+            </li>
+
+            <li>
+              Regular Monitoring
+            </li>
+
+            <li>
+              Monthly Report
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Business Pro',
+              30000,
+              '30 Days'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1363,31 +2795,70 @@
 
         <div class="package">
 
-          <div class="package-icon">🟠</div>
+          <div class="package-icon">
+            🟠
+          </div>
 
-          <h3>Social Media</h3>
+          <h3>
+            Social Media
+          </h3>
 
           <p class="package-for">
             Page ও Brand Management-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳8,000</strong>
-            <span class="duration">Monthly</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳8,000
+            </strong>
+
+            <span class="duration">
+              Monthly
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Social Media Management</li>
-            <li>Content Planning</li>
-            <li>Post Design</li>
-            <li>Basic Page Management</li>
-            <li>Content Support</li>
+
+            <li>
+              Social Media Management
+            </li>
+
+            <li>
+              Content Planning
+            </li>
+
+            <li>
+              Post Design
+            </li>
+
+            <li>
+              Basic Page Management
+            </li>
+
+            <li>
+              Content Support
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Social Media',
+              8000,
+              'Monthly'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1396,31 +2867,70 @@
 
         <div class="package">
 
-          <div class="package-icon">🔴</div>
+          <div class="package-icon">
+            🔴
+          </div>
 
-          <h3>Website</h3>
+          <h3>
+            Website
+          </h3>
 
           <p class="package-for">
             Business ও Online Shop-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳12,000</strong>
-            <span class="duration">One-time</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳12,000
+            </strong>
+
+            <span class="duration">
+              One-time
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Modern Responsive Website</li>
-            <li>Mobile Friendly Design</li>
-            <li>Business Information</li>
-            <li>Contact Integration</li>
-            <li>Basic Maintenance Support</li>
+
+            <li>
+              Modern Responsive Website
+            </li>
+
+            <li>
+              Mobile Friendly Design
+            </li>
+
+            <li>
+              Business Information
+            </li>
+
+            <li>
+              Contact Integration
+            </li>
+
+            <li>
+              Basic Maintenance Support
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Website',
+              12000,
+              'One-time'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1429,32 +2939,74 @@
 
         <div class="package">
 
-          <div class="package-icon">🟡</div>
+          <div class="package-icon">
+            🟡
+          </div>
 
-          <h3>Complete Business</h3>
+          <h3>
+            Complete Business
+          </h3>
 
           <p class="package-for">
             New বা Growing Business-এর জন্য
           </p>
 
           <div class="price">
-            <small>Starting from</small>
-            <strong>৳35,000</strong>
-            <span class="duration">Monthly</span>
+
+            <small>
+              Starting from
+            </small>
+
+            <strong>
+              ৳35,000
+            </strong>
+
+            <span class="duration">
+              Monthly
+            </span>
+
           </div>
 
+
           <ul>
-            <li>Business Website</li>
-            <li>Social Media Management</li>
-            <li>Digital Advertising</li>
-            <li>Campaign Optimization</li>
-            <li>Creative Support</li>
-            <li>Business Growth Support</li>
+
+            <li>
+              Business Website
+            </li>
+
+            <li>
+              Social Media Management
+            </li>
+
+            <li>
+              Digital Advertising
+            </li>
+
+            <li>
+              Campaign Optimization
+            </li>
+
+            <li>
+              Creative Support
+            </li>
+
+            <li>
+              Business Growth Support
+            </li>
+
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
-            Get Started →
-          </a>
+
+          <button
+            class="btn btn-primary"
+            onclick="selectPackage(
+              'Complete Business',
+              35000,
+              'Monthly'
+            )"
+          >
+            Select Package →
+          </button>
 
         </div>
 
@@ -1465,23 +3017,142 @@
   </section>
 
 
-  <!-- =========================
-       HOW IT WORKS
-  ========================= -->
+  <!-- ========================================================
+       PRINT SERVICES
+  ========================================================= -->
 
-  <section class="process" id="process">
+  <section
+    class="print-services"
+    id="print"
+  >
 
     <div class="container">
 
+
       <div class="section-heading">
 
-        <div class="section-label">How It Works</div>
+        <div class="section-label">
+          Print Service
+        </div>
 
-        <h2>Simple Process. Clear Communication.</h2>
+        <h2>
+          Online + Offline Business Support
+        </h2>
 
         <p>
-          Package নির্বাচন থেকে campaign শুরু—
-          পুরো process সহজভাবে সাজানো।
+          Digital service-এর পাশাপাশি আপনার business-এর
+          প্রয়োজনীয় print material-ও order করতে পারবেন।
+        </p>
+
+      </div>
+
+
+      <div class="print-grid">
+
+
+        <div class="print-card">
+
+          <div class="print-icon">
+            💳
+          </div>
+
+          <h3>
+            Visiting Card
+          </h3>
+
+          <p>
+            Professional business visiting card
+            design ও printing।
+          </p>
+
+        </div>
+
+
+        <div class="print-card">
+
+          <div class="print-icon">
+            📄
+          </div>
+
+          <h3>
+            Flyer & Leaflet
+          </h3>
+
+          <p>
+            Promotional flyer, leaflet ও
+            marketing materials।
+          </p>
+
+        </div>
+
+
+        <div class="print-card">
+
+          <div class="print-icon">
+            🪧
+          </div>
+
+          <h3>
+            Banner & Poster
+          </h3>
+
+          <p>
+            Business promotion, event এবং
+            campaign banner/poster।
+          </p>
+
+        </div>
+
+
+        <div class="print-card">
+
+          <div class="print-icon">
+            📦
+          </div>
+
+          <h3>
+            Business Materials
+          </h3>
+
+          <p>
+            প্রয়োজন অনুযায়ী অন্যান্য business
+            printing solution।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       PROCESS
+  ========================================================= -->
+
+  <section
+    class="process"
+    id="process"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          How It Works
+        </div>
+
+        <h2>
+          Simple Process
+        </h2>
+
+        <p>
+          Package নির্বাচন থেকে payment এবং কাজ শুরু—
+          পুরো process সহজ।
         </p>
 
       </div>
@@ -1489,36 +3160,72 @@
 
       <div class="process-grid">
 
-        <div class="process-card">
-          <div class="step-number">01</div>
-          <h3>Choose Package</h3>
-          <p>
-            আপনার business-এর প্রয়োজন অনুযায়ী package নির্বাচন করুন।
-          </p>
-        </div>
 
         <div class="process-card">
-          <div class="step-number">02</div>
-          <h3>Share Details</h3>
+
+          <div class="step-number">
+            01
+          </div>
+
+          <h3>
+            Choose Package
+          </h3>
+
           <p>
-            Business information ও প্রয়োজনীয় details আমাদের দিন।
+            আপনার প্রয়োজন অনুযায়ী package নির্বাচন করুন।
           </p>
+
         </div>
 
-        <div class="process-card">
-          <div class="step-number">03</div>
-          <h3>We Start</h3>
-          <p>
-            Planning, setup এবং campaign/service কাজ শুরু হবে।
-          </p>
-        </div>
 
         <div class="process-card">
-          <div class="step-number">04</div>
-          <h3>Track Results</h3>
+
+          <div class="step-number">
+            02
+          </div>
+
+          <h3>
+            Submit Details
+          </h3>
+
           <p>
-            কাজের progress ও performance report অনুযায়ী update পাবেন।
+            আপনার নাম, phone এবং প্রয়োজনীয় information দিন।
           </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <h3>
+            Payment
+          </h3>
+
+          <p>
+            Available payment method ব্যবহার করে payment করুন।
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step-number">
+            04
+          </div>
+
+          <h3>
+            Work Starts
+          </h3>
+
+          <p>
+            Payment/request confirmation-এর পর কাজ শুরু হবে।
+          </p>
+
         </div>
 
       </div>
@@ -1528,15 +3235,19 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        WHY SARAKAT
-  ========================= -->
+  ========================================================= -->
 
-  <section id="about">
+  <section
+    id="about"
+  >
 
     <div class="container">
 
+
       <div class="why-grid">
+
 
         <div class="why-box">
 
@@ -1549,9 +3260,8 @@
           </h2>
 
           <p>
-            শুধু service দেওয়ার পরিবর্তে business-এর online
-            presence ও growth-এর জন্য practical digital solution
-            দেওয়াই আমাদের লক্ষ্য।
+            Website, marketing, social media এবং printing—
+            business-এর প্রয়োজনীয় solution এক জায়গায়।
           </p>
 
         </div>
@@ -1559,16 +3269,24 @@
 
         <div class="why-list">
 
+
           <div class="why-item">
 
-            <div class="why-check">✓</div>
+            <div class="why-check">
+              ✓
+            </div>
 
             <div>
-              <h3>Clear Packages</h3>
+
+              <h3>
+                Clear Packages
+              </h3>
+
               <p>
-                আগে থেকেই package, duration ও starting price
-                দেখে সিদ্ধান্ত নেওয়ার সুযোগ।
+                আগে থেকেই service, duration ও
+                starting price দেখতে পারবেন।
               </p>
+
             </div>
 
           </div>
@@ -1576,14 +3294,21 @@
 
           <div class="why-item">
 
-            <div class="why-check">✓</div>
+            <div class="why-check">
+              ✓
+            </div>
 
             <div>
-              <h3>Business Focused</h3>
+
+              <h3>
+                Easy Payment
+              </h3>
+
               <p>
-                আপনার business-এর প্রয়োজনকে কেন্দ্র করে
-                service structure করা।
+                Payment method ও transaction details
+                সহজভাবে submit করা যাবে।
               </p>
+
             </div>
 
           </div>
@@ -1591,14 +3316,21 @@
 
           <div class="why-item">
 
-            <div class="why-check">✓</div>
+            <div class="why-check">
+              ✓
+            </div>
 
             <div>
-              <h3>Modern Digital Solutions</h3>
+
+              <h3>
+                Digital + Print
+              </h3>
+
               <p>
-                Website, social media ও advertising—
-                এক জায়গা থেকে digital support।
+                Online digital service এবং offline
+                printing support একসাথে।
               </p>
+
             </div>
 
           </div>
@@ -1606,17 +3338,25 @@
 
           <div class="why-item">
 
-            <div class="why-check">✓</div>
+            <div class="why-check">
+              ✓
+            </div>
 
             <div>
-              <h3>Simple Communication</h3>
+
+              <h3>
+                Direct WhatsApp
+              </h3>
+
               <p>
-                সহজভাবে কাজের scope, timeline ও next step
-                বুঝিয়ে দেওয়া।
+                01705633700 নম্বরে সরাসরি business
+                request পাঠানো যাবে।
               </p>
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -1627,23 +3367,31 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        PORTFOLIO
-  ========================= -->
+  ========================================================= -->
 
-  <section class="portfolio" id="portfolio">
+  <section
+    class="portfolio"
+    id="portfolio"
+  >
 
     <div class="container">
 
+
       <div class="section-heading">
 
-        <div class="section-label">Portfolio</div>
+        <div class="section-label">
+          Portfolio
+        </div>
 
-        <h2>Selected Business Solutions</h2>
+        <h2>
+          Business Solutions
+        </h2>
 
         <p>
-          বিভিন্ন ধরনের business-এর জন্য digital solution,
-          creative এবং online presence তৈরি করা যায়।
+          Local business, brand ও service provider-এর
+          জন্য modern digital solution।
         </p>
 
       </div>
@@ -1651,19 +3399,488 @@
 
       <div class="portfolio-grid">
 
-        <div class="portfolio-card">
-          <span>LOCAL BUSINESS</span>
-          <h3>Brand Promotion</h3>
-        </div>
 
         <div class="portfolio-card">
-          <span>SOCIAL MEDIA</span>
-          <h3>Page & Content Management</h3>
+
+          <span>
+            LOCAL BUSINESS
+          </span>
+
+          <h3>
+            Brand Promotion
+          </h3>
+
         </div>
 
+
         <div class="portfolio-card">
-          <span>WEB SOLUTION</span>
-          <h3>Modern Business Website</h3>
+
+          <span>
+            SOCIAL MEDIA
+          </span>
+
+          <h3>
+            Page & Content Management
+          </h3>
+
+        </div>
+
+
+        <div class="portfolio-card">
+
+          <span>
+            WEB SOLUTION
+          </span>
+
+          <h3>
+            Modern Business Website
+          </h3>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       PAYMENT SECTION
+  ========================================================= -->
+
+  <section
+    class="payment"
+    id="payment"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          Payment
+        </div>
+
+        <h2>
+          Select Package & Submit Payment
+        </h2>
+
+        <p>
+          Package নির্বাচন করুন, payment method বেছে নিন
+          এবং transaction ID submit করুন।
+        </p>
+
+      </div>
+
+
+      <div class="payment-grid">
+
+
+        <!-- PAYMENT SUMMARY -->
+
+        <div class="payment-summary">
+
+          <h3>
+            Order Summary
+          </h3>
+
+
+          <div class="selected-package">
+
+            <small>
+              Selected Package
+            </small>
+
+            <h4 id="summaryPackage">
+              No Package Selected
+            </h4>
+
+            <div
+              class="selected-price"
+              id="summaryPrice"
+            >
+              ৳0
+            </div>
+
+            <small id="summaryDuration">
+              Please select a package
+            </small>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Service
+            </span>
+
+            <strong id="summaryService">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Duration
+            </span>
+
+            <strong id="summaryDuration2">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="summary-total">
+
+            <span>
+              Total
+            </span>
+
+            <span id="summaryTotal">
+              ৳0
+            </span>
+
+          </div>
+
+
+          <div style="margin-top:20px;">
+
+            <button
+              class="btn btn-light"
+              style="width:100%;"
+              onclick="printInvoice()"
+            >
+              🖨️ Print Invoice
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- PAYMENT FORM -->
+
+        <div class="payment-form">
+
+          <h3>
+            Customer & Payment Details
+          </h3>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label>
+                Customer Name *
+              </label>
+
+              <input
+                type="text"
+                id="customerName"
+                placeholder="আপনার নাম"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Phone Number *
+              </label>
+
+              <input
+                type="tel"
+                id="customerPhone"
+                placeholder="01XXXXXXXXX"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Selected Package *
+            </label>
+
+            <select id="paymentPackage">
+
+              <option value="">
+                Select a Package
+              </option>
+
+              <option
+                value="Starter Ads|9000|7 Days"
+              >
+                Starter Ads — ৳9,000
+              </option>
+
+              <option
+                value="Growth|15000|14 Days"
+              >
+                Growth — ৳15,000
+              </option>
+
+              <option
+                value="Business Pro|30000|30 Days"
+              >
+                Business Pro — ৳30,000
+              </option>
+
+              <option
+                value="Social Media|8000|Monthly"
+              >
+                Social Media — ৳8,000
+              </option>
+
+              <option
+                value="Website|12000|One-time"
+              >
+                Website — ৳12,000
+              </option>
+
+              <option
+                value="Complete Business|35000|Monthly"
+              >
+                Complete Business — ৳35,000
+              </option>
+
+              <option
+                value="Custom Requirement|0|Custom"
+              >
+                Custom Requirement
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <label
+            style="
+              display:block;
+              font-size:13px;
+              font-weight:800;
+              margin-bottom:8px;
+            "
+          >
+            Payment Method
+          </label>
+
+
+          <div class="payment-methods">
+
+
+            <div
+              class="payment-method"
+              data-method="bKash"
+              onclick="selectPaymentMethod('bKash')"
+            >
+
+              <div style="font-size:25px;">
+                📱
+              </div>
+
+              <strong>
+                bKash
+              </strong>
+
+              <small>
+                Personal/Merchant
+              </small>
+
+            </div>
+
+
+            <div
+              class="payment-method"
+              data-method="Nagad"
+              onclick="selectPaymentMethod('Nagad')"
+            >
+
+              <div style="font-size:25px;">
+                💳
+              </div>
+
+              <strong>
+                Nagad
+              </strong>
+
+              <small>
+                Personal/Merchant
+              </small>
+
+            </div>
+
+
+            <div
+              class="payment-method"
+              data-method="Bank"
+              onclick="selectPaymentMethod('Bank')"
+            >
+
+              <div style="font-size:25px;">
+                🏦
+              </div>
+
+              <strong>
+                Bank
+              </strong>
+
+              <small>
+                Bank Transfer
+              </small>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- BKASH -->
+
+          <div
+            class="payment-instruction"
+            id="bkashInstruction"
+          >
+
+            <strong>
+              bKash Payment
+            </strong>
+
+            <p style="font-size:13px;margin-top:5px;">
+              bKash payment করার পর নিচের transaction ID দিন।
+            </p>
+
+            <div class="payment-number">
+              01705633700
+            </div>
+
+            <small>
+              Payment করার আগে নম্বরটি অবশ্যই verify করুন।
+            </small>
+
+          </div>
+
+
+          <!-- NAGAD -->
+
+          <div
+            class="payment-instruction"
+            id="nagadInstruction"
+          >
+
+            <strong>
+              Nagad Payment
+            </strong>
+
+            <p style="font-size:13px;margin-top:5px;">
+              Nagad payment করার পর transaction ID দিন।
+            </p>
+
+            <div class="payment-number">
+              01705633700
+            </div>
+
+            <small>
+              Payment করার আগে নম্বরটি অবশ্যই verify করুন।
+            </small>
+
+          </div>
+
+
+          <!-- BANK -->
+
+          <div
+            class="payment-instruction"
+            id="bankInstruction"
+          >
+
+            <strong>
+              Bank Transfer
+            </strong>
+
+            <p style="font-size:13px;margin-top:5px;">
+              Bank payment details Sarakat Agency থেকে
+              confirmation-এর মাধ্যমে দেওয়া হবে।
+            </p>
+
+            <small>
+              Bank details জানতে WhatsApp করুন:
+              01705633700
+            </small>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Transaction ID
+            </label>
+
+            <input
+              type="text"
+              id="transactionId"
+              placeholder="যেমন: 8A7B6C5D"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Additional Message
+            </label>
+
+            <textarea
+              id="paymentMessage"
+              placeholder="আপনার কোনো অতিরিক্ত তথ্য থাকলে লিখুন..."
+            ></textarea>
+
+          </div>
+
+
+          <div class="notice">
+
+            ⚠️ Payment করার পরে transaction ID
+            সঠিকভাবে লিখুন। Final confirmation
+            Sarakat Agency কর্তৃক করা হবে।
+
+          </div>
+
+
+          <button
+            class="btn btn-success"
+            style="width:100%;"
+            onclick="sendPaymentToWhatsApp()"
+          >
+            📲 Submit Payment Request via WhatsApp
+          </button>
+
+
+          <button
+            class="btn btn-dark"
+            style="width:100%;margin-top:10px;"
+            onclick="printInvoice()"
+          >
+            🖨️ Print / Save Invoice
+          </button>
+
+
         </div>
 
       </div>
@@ -1673,9 +3890,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        CTA
-  ========================= -->
+  ========================================================= -->
 
   <div class="cta">
 
@@ -1683,17 +3900,24 @@
 
       <div>
 
-        <h2>Ready to Grow Your Business?</h2>
+        <h2>
+          Ready to Grow Your Business?
+        </h2>
 
         <p>
-          আপনার প্রয়োজন অনুযায়ী একটি package নির্বাচন করুন
-          এবং Sarakat-এর সাথে কাজ শুরু করুন।
+          Package নির্বাচন করুন অথবা সরাসরি
+          01705633700 নম্বরে WhatsApp করুন।
         </p>
 
       </div>
 
-      <a href="#contact" class="btn btn-primary">
-        Start Your Project →
+
+      <a
+        href="https://wa.me/8801705633700"
+        target="_blank"
+        class="btn btn-success"
+      >
+        WhatsApp Now →
       </a>
 
     </div>
@@ -1701,23 +3925,31 @@
   </div>
 
 
-  <!-- =========================
+  <!-- ========================================================
        CONTACT
-  ========================= -->
+  ========================================================= -->
 
-  <section class="contact" id="contact">
+  <section
+    class="contact"
+    id="contact"
+  >
 
     <div class="container">
 
+
       <div class="section-heading">
 
-        <div class="section-label">Get Started</div>
+        <div class="section-label">
+          Contact
+        </div>
 
-        <h2>Start Your Project With Sarakat</h2>
+        <h2>
+          Start Your Project
+        </h2>
 
         <p>
-          নিচের form থেকে আপনার প্রয়োজনের package নির্বাচন
-          করে আমাদের সাথে যোগাযোগ করতে পারেন।
+          আপনার প্রয়োজনের package নির্বাচন করে
+          সরাসরি WhatsApp-এ request পাঠাতে পারেন।
         </p>
 
       </div>
@@ -1725,90 +3957,168 @@
 
       <div class="contact-grid">
 
+
         <div class="contact-info">
 
-          <h3>Sar​akat Agency</h3>
+          <h3>
+            Sarakat Agency
+          </h3>
+
 
           <div class="contact-item">
-            <small>Service</small>
-            Digital Marketing & Business Solutions
+
+            <small>
+              WhatsApp / Phone
+            </small>
+
+            <strong>
+              01705633700
+            </strong>
+
           </div>
 
-          <div class="contact-item">
-            <small>WhatsApp</small>
-            Available for Business Support
-          </div>
 
           <div class="contact-item">
-            <small>Working Model</small>
-            Online / Remote Service
+
+            <small>
+              Services
+            </small>
+
+            Digital Marketing,
+            Social Media,
+            Website & Printing
+
           </div>
 
+
           <div class="contact-item">
-            <small>Packages</small>
-            Ads • Social Media • Website • Complete Business
+
+            <small>
+              Payment
+            </small>
+
+            bKash • Nagad • Bank Transfer
+
           </div>
+
+
+          <div class="contact-item">
+
+            <small>
+              Support
+            </small>
+
+            Online Business Support
+
+          </div>
+
+
+          <a
+            href="https://wa.me/8801705633700"
+            target="_blank"
+            class="btn btn-success"
+            style="width:100%;margin-top:15px;"
+          >
+            💬 Contact on WhatsApp
+          </a>
 
         </div>
 
 
         <div class="contact-form">
 
-          <form id="contactForm">
+          <div class="form-group">
 
-            <div class="form-row">
+            <label>
+              Your Name
+            </label>
 
-              <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                required
-              >
+            <input
+              type="text"
+              id="quickName"
+              placeholder="আপনার নাম"
+            >
 
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Phone / WhatsApp"
-                required
-              >
-
-            </div>
+          </div>
 
 
-            <select id="package" required>
+          <div class="form-group">
 
-              <option value="">
-                Select a Package
+            <label>
+              Phone Number
+            </label>
+
+            <input
+              type="tel"
+              id="quickPhone"
+              placeholder="01XXXXXXXXX"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              What do you need?
+            </label>
+
+            <select id="quickService">
+
+              <option>
+                Digital Marketing
               </option>
 
-              <option>Starter Ads — ৳9,000 / 7 Days</option>
+              <option>
+                Facebook Ads
+              </option>
 
-              <option>Growth — ৳15,000 / 14 Days</option>
+              <option>
+                Social Media Management
+              </option>
 
-              <option>Business Pro — ৳30,000 / 30 Days</option>
+              <option>
+                Website
+              </option>
 
-              <option>Social Media — ৳8,000 / Monthly</option>
+              <option>
+                Printing
+              </option>
 
-              <option>Website — ৳12,000 / One-time</option>
+              <option>
+                Complete Business
+              </option>
 
-              <option>Complete Business — ৳35,000 / Monthly</option>
-
-              <option>Custom Requirement</option>
+              <option>
+                Custom Requirement
+              </option>
 
             </select>
 
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Message
+            </label>
 
             <textarea
-              id="message"
-              placeholder="Tell us briefly about your business..."
+              id="quickMessage"
+              placeholder="আপনার প্রয়োজন লিখুন..."
             ></textarea>
 
+          </div>
 
-            <button type="submit" class="btn btn-primary">
-              Send Request →
-            </button>
 
-          </form>
+          <button
+            class="btn btn-primary"
+            style="width:100%;"
+            onclick="sendQuickWhatsApp()"
+          >
+            Send Request on WhatsApp →
+          </button>
 
         </div>
 
@@ -1819,25 +4129,40 @@
   </section>
 
 
-  <!-- =========================
+  <!-- ========================================================
        FOOTER
-  ========================= -->
+  ========================================================= -->
 
   <footer>
 
+
     <div class="footer-grid">
+
 
       <div>
 
-        <div class="logo" style="color:white;">
-          <span class="logo-mark">S</span>
+        <div
+          class="logo"
+          style="color:white;"
+        >
+
+          <span class="logo-mark">
+            S
+          </span>
+
           SARAKAT
+
         </div>
 
+
         <p style="margin-top:15px;">
-          Digital Marketing, Website Development,
-          Social Media এবং Business Solutions-এর
+
+          Digital Marketing,
+          Website,
+          Social Media,
+          Printing এবং Business Solutions-এর
           জন্য আপনার digital partner।
+
         </p>
 
       </div>
@@ -1845,37 +4170,77 @@
 
       <div>
 
-        <h4>Quick Links</h4>
+        <h4>
+          Quick Links
+        </h4>
 
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#packages">
+          Packages
+        </a>
+
+        <a href="#payment">
+          Payment
+        </a>
 
       </div>
 
 
       <div>
 
-        <h4>Services</h4>
+        <h4>
+          Services
+        </h4>
 
-        <a href="#packages">Facebook Ads</a>
-        <a href="#packages">Social Media</a>
-        <a href="#packages">Website</a>
-        <a href="#packages">Business Solutions</a>
+        <a href="#packages">
+          Facebook Ads
+        </a>
+
+        <a href="#packages">
+          Social Media
+        </a>
+
+        <a href="#packages">
+          Website
+        </a>
+
+        <a href="#print">
+          Printing
+        </a>
 
       </div>
 
 
       <div>
 
-        <h4>Contact</h4>
+        <h4>
+          Contact
+        </h4>
 
-        <a href="#contact">Get Started</a>
-        <a href="#contact">Business Support</a>
-        <a href="#contact">Request a Package</a>
+        <a href="tel:01705633700">
+          01705633700
+        </a>
+
+        <a
+          href="https://wa.me/8801705633700"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+        <a href="#payment">
+          Payment
+        </a>
 
       </div>
+
 
     </div>
 
@@ -1883,11 +4248,15 @@
     <div class="footer-bottom">
 
       <span>
-        © <span id="year"></span> Sarakat Agency. All Rights Reserved.
+        ©
+        <span id="year"></span>
+        Sarakat Agency.
+        All Rights Reserved.
       </span>
 
+
       <span>
-        Digital Solutions for Modern Business
+        Digital + Print Business Solutions
       </span>
 
     </div>
@@ -1895,113 +4264,734 @@
   </footer>
 
 
-  <!-- =========================
-       WHATSAPP
-  ========================= -->
+  <!-- ========================================================
+       FLOATING BUTTONS
+  ========================================================= -->
 
-  <a
-    href="https://wa.me/"
-    class="whatsapp"
-    target="_blank"
-    aria-label="WhatsApp"
-    title="WhatsApp"
+  <div class="floating-buttons">
+
+
+    <a
+      href="https://wa.me/8801705633700"
+      target="_blank"
+      class="floating floating-whatsapp"
+      title="WhatsApp Sarakat"
+    >
+      💬
+    </a>
+
+
+    <button
+      class="floating floating-print"
+      onclick="printInvoice()"
+      title="Print Invoice"
+    >
+      🖨️
+    </button>
+
+
+  </div>
+
+
+  <!-- ========================================================
+       INVOICE MODAL
+  ========================================================= -->
+
+  <div
+    class="modal"
+    id="invoiceModal"
   >
-    💬
-  </a>
+
+    <div class="modal-box">
 
 
-  <!-- =========================
+      <button
+        class="modal-close no-print"
+        onclick="closeInvoice()"
+      >
+        ×
+      </button>
+
+
+      <div
+        style="
+          text-align:center;
+          margin-bottom:20px;
+        "
+      >
+
+        <h2>
+          SARAKAT AGENCY
+        </h2>
+
+        <p>
+          Digital & Business Solutions
+        </p>
+
+        <small>
+          WhatsApp: 01705633700
+        </small>
+
+      </div>
+
+
+      <div class="invoice">
+
+
+        <div class="invoice-header">
+
+          <div>
+
+            <strong>
+              CUSTOMER INVOICE
+            </strong>
+
+            <div
+              style="
+                font-size:12px;
+                color:#64748b;
+                margin-top:4px;
+              "
+            >
+              Invoice Preview
+            </div>
+
+          </div>
+
+
+          <div
+            style="
+              text-align:right;
+              font-size:12px;
+            "
+          >
+
+            <div>
+              Date:
+              <span id="invoiceDate"></span>
+            </div>
+
+            <div>
+              ID:
+              <span id="invoiceId"></span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Customer
+          </span>
+
+          <strong id="invoiceCustomer">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Phone
+          </span>
+
+          <strong id="invoicePhone">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Package
+          </span>
+
+          <strong id="invoicePackage">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Duration
+          </span>
+
+          <strong id="invoiceDuration">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Payment Method
+          </span>
+
+          <strong id="invoicePaymentMethod">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-row">
+
+          <span>
+            Transaction ID
+          </span>
+
+          <strong id="invoiceTransaction">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="invoice-total">
+
+          <span>
+            Total
+          </span>
+
+          <span id="invoiceTotal">
+            ৳0
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="no-print"
+        style="
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:10px;
+        "
+      >
+
+        <button
+          class="btn btn-dark"
+          onclick="window.print()"
+        >
+          🖨️ Print
+        </button>
+
+
+        <button
+          class="btn btn-success"
+          onclick="sendInvoiceToWhatsApp()"
+        >
+          💬 WhatsApp
+        </button>
+
+      </div>
+
+
+      <p
+        class="no-print"
+        style="
+          font-size:12px;
+          color:#64748b;
+          text-align:center;
+          margin-top:15px;
+        "
+      >
+        This is a customer request/payment record.
+        Final payment confirmation will be verified by Sarakat Agency.
+      </p>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================
        JAVASCRIPT
-  ========================= -->
+  ========================================================= -->
 
   <script>
 
-    /* Mobile Menu */
+
+    /* ========================================================
+       BASIC SETTINGS
+    ========================================================= */
+
+    const SARAKAT_WHATSAPP =
+      "8801705633700";
+
+
+    let selectedPackage = {
+
+      name: "",
+
+      price: 0,
+
+      duration: ""
+
+    };
+
+
+    let selectedPaymentMethod = "";
+
+
+    /* ========================================================
+       MOBILE MENU
+    ========================================================= */
 
     function toggleMenu() {
 
-      const nav = document.getElementById("mainNav");
+      const nav =
+        document.getElementById(
+          "mainNav"
+        );
 
-      nav.classList.toggle("active");
+      nav.classList.toggle(
+        "active"
+      );
 
     }
 
 
-    /* Close mobile menu after click */
+    document
+      .querySelectorAll(
+        "#mainNav a"
+      )
+      .forEach(
+        function(link) {
 
-    document.querySelectorAll("#mainNav a").forEach(function(link) {
+          link.addEventListener(
+            "click",
+            function() {
 
-      link.addEventListener("click", function() {
+              document
+                .getElementById(
+                  "mainNav"
+                )
+                .classList
+                .remove(
+                  "active"
+                );
 
-        document.getElementById("mainNav").classList.remove("active");
+            }
+          );
 
-      });
+        }
+      );
 
-    });
 
+    /* ========================================================
+       YEAR
+    ========================================================= */
 
-    /* Current Year */
-
-    document.getElementById("year").textContent =
+    document
+      .getElementById("year")
+      .textContent =
       new Date().getFullYear();
 
 
-    /* Contact Form */
+    /* ========================================================
+       SELECT PACKAGE
+    ========================================================= */
 
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
+    function selectPackage(
+      name,
+      price,
+      duration
+    ) {
 
-      e.preventDefault();
+      selectedPackage = {
 
-      const name =
-        document.getElementById("name").value.trim();
+        name: name,
 
-      const phone =
-        document.getElementById("phone").value.trim();
+        price: Number(price),
 
-      const selectedPackage =
-        document.getElementById("package").value;
+        duration: duration
 
-      const message =
-        document.getElementById("message").value.trim();
+      };
 
 
-      if (!name || !phone || !selectedPackage) {
+      document
+        .getElementById(
+          "summaryPackage"
+        )
+        .textContent =
+        name;
 
-        alert("Please complete the required fields.");
 
-        return;
+      document
+        .getElementById(
+          "summaryPrice"
+        )
+        .textContent =
+        "৳" +
+        Number(price).toLocaleString();
+
+
+      document
+        .getElementById(
+          "summaryDuration"
+        )
+        .textContent =
+        duration;
+
+
+      document
+        .getElementById(
+          "summaryService"
+        )
+        .textContent =
+        name;
+
+
+      document
+        .getElementById(
+          "summaryDuration2"
+        )
+        .textContent =
+        duration;
+
+
+      document
+        .getElementById(
+          "summaryTotal"
+        )
+        .textContent =
+        "৳" +
+        Number(price).toLocaleString();
+
+
+      const paymentSelect =
+        document
+          .getElementById(
+            "paymentPackage"
+          );
+
+
+      const optionValue =
+        name +
+        "|" +
+        price +
+        "|" +
+        duration;
+
+
+      for (
+        let i = 0;
+        i < paymentSelect.options.length;
+        i++
+      ) {
+
+        if (
+          paymentSelect
+            .options[i]
+            .value ===
+          optionValue
+        ) {
+
+          paymentSelect.selectedIndex =
+            i;
+
+          break;
+
+        }
 
       }
 
 
-      const text =
-        "Hello Sarakat Agency,%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Package: " + encodeURIComponent(selectedPackage) + "%0A" +
-        "Message: " + encodeURIComponent(message);
+      document
+        .getElementById(
+          "payment"
+        )
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
 
 
-      /*
-        IMPORTANT:
-        এখানে আপনার Sarakat WhatsApp number বসাবেন।
+    /* ========================================================
+       PAYMENT PACKAGE CHANGE
+    ========================================================= */
 
-        Example:
-        https://wa.me/8801XXXXXXXXX
+    document
+      .getElementById(
+        "paymentPackage"
+      )
+      .addEventListener(
+        "change",
+        function() {
 
-        নিচের URL পরিবর্তন করুন।
-      */
+          if (!this.value) {
 
-      const whatsappNumber = "8801XXXXXXXXX";
+            selectedPackage = {
 
-      const whatsappURL =
-        "https://wa.me/" + whatsappNumber + "?text=" + text;
+              name: "",
+
+              price: 0,
+
+              duration: ""
+
+            };
+
+            updateSummary();
+
+            return;
+
+          }
 
 
-      if (whatsappNumber === "8801XXXXXXXXX") {
+          const parts =
+            this.value.split("|");
+
+
+          selectedPackage = {
+
+            name: parts[0],
+
+            price:
+              Number(parts[1]),
+
+            duration:
+              parts[2]
+
+          };
+
+
+          updateSummary();
+
+        }
+      );
+
+
+    function updateSummary() {
+
+      document
+        .getElementById(
+          "summaryPackage"
+        )
+        .textContent =
+        selectedPackage.name ||
+        "No Package Selected";
+
+
+      document
+        .getElementById(
+          "summaryPrice"
+        )
+        .textContent =
+        "৳" +
+        Number(
+          selectedPackage.price || 0
+        ).toLocaleString();
+
+
+      document
+        .getElementById(
+          "summaryDuration"
+        )
+        .textContent =
+        selectedPackage.duration ||
+        "Please select a package";
+
+
+      document
+        .getElementById(
+          "summaryService"
+        )
+        .textContent =
+        selectedPackage.name ||
+        "—";
+
+
+      document
+        .getElementById(
+          "summaryDuration2"
+        )
+        .textContent =
+        selectedPackage.duration ||
+        "—";
+
+
+      document
+        .getElementById(
+          "summaryTotal"
+        )
+        .textContent =
+        "৳" +
+        Number(
+          selectedPackage.price || 0
+        ).toLocaleString();
+
+    }
+
+
+    /* ========================================================
+       PAYMENT METHOD
+    ========================================================= */
+
+    function selectPaymentMethod(
+      method
+    ) {
+
+      selectedPaymentMethod =
+        method;
+
+
+      document
+        .querySelectorAll(
+          ".payment-method"
+        )
+        .forEach(
+          function(item) {
+
+            item.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+      const selected =
+        document
+          .querySelector(
+            '[data-method="' +
+            method +
+            '"]'
+          );
+
+
+      if (selected) {
+
+        selected.classList.add(
+          "active"
+        );
+
+      }
+
+
+      document
+        .querySelectorAll(
+          ".payment-instruction"
+        )
+        .forEach(
+          function(item) {
+
+            item.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+      if (method === "bKash") {
+
+        document
+          .getElementById(
+            "bkashInstruction"
+          )
+          .classList
+          .add(
+            "active"
+          );
+
+      }
+
+
+      if (method === "Nagad") {
+
+        document
+          .getElementById(
+            "nagadInstruction"
+          )
+          .classList
+          .add(
+            "active"
+          );
+
+      }
+
+
+      if (method === "Bank") {
+
+        document
+          .getElementById(
+            "bankInstruction"
+          )
+          .classList
+          .add(
+            "active"
+          );
+
+      }
+
+    }
+
+
+    /* ========================================================
+       PAYMENT → WHATSAPP
+    ========================================================= */
+
+    function sendPaymentToWhatsApp() {
+
+
+      const name =
+        document
+          .getElementById(
+            "customerName"
+          )
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById(
+            "customerPhone"
+          )
+          .value
+          .trim();
+
+
+      const transaction =
+        document
+          .getElementById(
+            "transactionId"
+          )
+          .value
+          .trim();
+
+
+      const message =
+        document
+          .getElementById(
+            "paymentMessage"
+          )
+          .value
+          .trim();
+
+
+      if (!name) {
 
         alert(
-          "Form is working. Please replace 8801XXXXXXXXX with your Sarakat WhatsApp number."
+          "Please enter customer name."
         );
 
         return;
@@ -2009,11 +4999,564 @@
       }
 
 
-      window.open(whatsappURL, "_blank");
+      if (!phone) {
 
-    });
+        alert(
+          "Please enter phone number."
+        );
+
+        return;
+
+      }
+
+
+      if (!selectedPackage.name) {
+
+        alert(
+          "Please select a package."
+        );
+
+        return;
+
+      }
+
+
+      if (!selectedPaymentMethod) {
+
+        alert(
+          "Please select a payment method."
+        );
+
+        return;
+
+      }
+
+
+      let text =
+
+        "Hello Sarakat Agency,%0A%0A" +
+
+        "🧾 PAYMENT REQUEST%0A" +
+
+        "------------------------%0A" +
+
+        "Customer: " +
+        encodeURIComponent(name) +
+        "%0A" +
+
+        "Phone: " +
+        encodeURIComponent(phone) +
+        "%0A" +
+
+        "Package: " +
+        encodeURIComponent(
+          selectedPackage.name
+        ) +
+        "%0A" +
+
+        "Duration: " +
+        encodeURIComponent(
+          selectedPackage.duration
+        ) +
+        "%0A" +
+
+        "Amount: ৳" +
+        selectedPackage.price +
+        "%0A" +
+
+        "Payment Method: " +
+        encodeURIComponent(
+          selectedPaymentMethod
+        ) +
+        "%0A" +
+
+        "Transaction ID: " +
+        encodeURIComponent(
+          transaction ||
+          "Not provided"
+        ) +
+        "%0A";
+
+
+      if (message) {
+
+        text +=
+
+          "Message: " +
+          encodeURIComponent(
+            message
+          ) +
+          "%0A";
+
+      }
+
+
+      text +=
+
+        "%0APlease verify my payment/request.%0A" +
+
+        "Thank you.";
+
+
+      const url =
+        "https://wa.me/" +
+        SARAKAT_WHATSAPP +
+        "?text=" +
+        text;
+
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    }
+
+
+    /* ========================================================
+       QUICK CONTACT → WHATSAPP
+    ========================================================= */
+
+    function sendQuickWhatsApp() {
+
+
+      const name =
+        document
+          .getElementById(
+            "quickName"
+          )
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById(
+            "quickPhone"
+          )
+          .value
+          .trim();
+
+
+      const service =
+        document
+          .getElementById(
+            "quickService"
+          )
+          .value;
+
+
+      const message =
+        document
+          .getElementById(
+            "quickMessage"
+          )
+          .value
+          .trim();
+
+
+      if (!name || !phone) {
+
+        alert(
+          "Please enter your name and phone number."
+        );
+
+        return;
+
+      }
+
+
+      let text =
+
+        "Hello Sarakat Agency,%0A%0A" +
+
+        "NEW BUSINESS REQUEST%0A" +
+
+        "------------------------%0A" +
+
+        "Name: " +
+        encodeURIComponent(name) +
+        "%0A" +
+
+        "Phone: " +
+        encodeURIComponent(phone) +
+        "%0A" +
+
+        "Service: " +
+        encodeURIComponent(service) +
+        "%0A" +
+
+        "Message: " +
+        encodeURIComponent(
+          message ||
+          "No additional message."
+        ) +
+        "%0A%0A" +
+
+        "Please contact me.";
+
+
+      window.open(
+
+        "https://wa.me/" +
+        SARAKAT_WHATSAPP +
+        "?text=" +
+        text,
+
+        "_blank"
+
+      );
+
+    }
+
+
+    /* ========================================================
+       INVOICE DATA
+    ========================================================= */
+
+    function prepareInvoice() {
+
+
+      const name =
+        document
+          .getElementById(
+            "customerName"
+          )
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById(
+            "customerPhone"
+          )
+          .value
+          .trim();
+
+
+      const transaction =
+        document
+          .getElementById(
+            "transactionId"
+          )
+          .value
+          .trim();
+
+
+      document
+        .getElementById(
+          "invoiceCustomer"
+        )
+        .textContent =
+        name ||
+        "Customer";
+
+
+      document
+        .getElementById(
+          "invoicePhone"
+        )
+        .textContent =
+        phone ||
+        "—";
+
+
+      document
+        .getElementById(
+          "invoicePackage"
+        )
+        .textContent =
+        selectedPackage.name ||
+        "—";
+
+
+      document
+        .getElementById(
+          "invoiceDuration"
+        )
+        .textContent =
+        selectedPackage.duration ||
+        "—";
+
+
+      document
+        .getElementById(
+          "invoicePaymentMethod"
+        )
+        .textContent =
+        selectedPaymentMethod ||
+        "—";
+
+
+      document
+        .getElementById(
+          "invoiceTransaction"
+        )
+        .textContent =
+        transaction ||
+        "—";
+
+
+      document
+        .getElementById(
+          "invoiceTotal"
+        )
+        .textContent =
+        "৳" +
+        Number(
+          selectedPackage.price || 0
+        ).toLocaleString();
+
+
+      const now =
+        new Date();
+
+
+      document
+        .getElementById(
+          "invoiceDate"
+        )
+        .textContent =
+        now.toLocaleDateString(
+          "en-GB"
+        );
+
+
+      const randomId =
+
+        "SAR-" +
+
+        now.getFullYear() +
+
+        String(
+          now.getMonth() + 1
+        ).padStart(
+          2,
+          "0"
+        ) +
+
+        String(
+          now.getDate()
+        ).padStart(
+          2,
+          "0"
+        ) +
+
+        "-" +
+
+        Math.floor(
+          1000 +
+          Math.random() * 9000
+        );
+
+
+      document
+        .getElementById(
+          "invoiceId"
+        )
+        .textContent =
+        randomId;
+
+    }
+
+
+    /* ========================================================
+       PRINT INVOICE
+    ========================================================= */
+
+    function printInvoice() {
+
+
+      if (!selectedPackage.name) {
+
+        alert(
+          "Please select a package first."
+        );
+
+        document
+          .getElementById(
+            "packages"
+          )
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+        return;
+
+      }
+
+
+      prepareInvoice();
+
+
+      document
+        .getElementById(
+          "invoiceModal"
+        )
+        .classList
+        .add(
+          "active"
+        );
+
+    }
+
+
+    function closeInvoice() {
+
+      document
+        .getElementById(
+          "invoiceModal"
+        )
+        .classList
+        .remove(
+          "active"
+        );
+
+    }
+
+
+    /* ========================================================
+       SEND INVOICE TO WHATSAPP
+    ========================================================= */
+
+    function sendInvoiceToWhatsApp() {
+
+
+      prepareInvoice();
+
+
+      const name =
+        document
+          .getElementById(
+            "customerName"
+          )
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById(
+            "customerPhone"
+          )
+          .value
+          .trim();
+
+
+      const transaction =
+        document
+          .getElementById(
+            "transactionId"
+          )
+          .value
+          .trim();
+
+
+      const invoiceId =
+        document
+          .getElementById(
+            "invoiceId"
+          )
+          .textContent;
+
+
+      const text =
+
+        "Hello Sarakat Agency,%0A%0A" +
+
+        "🧾 INVOICE / PAYMENT RECORD%0A" +
+
+        "Invoice: " +
+        encodeURIComponent(
+          invoiceId
+        ) +
+        "%0A" +
+
+        "Customer: " +
+        encodeURIComponent(
+          name ||
+          "Customer"
+        ) +
+        "%0A" +
+
+        "Phone: " +
+        encodeURIComponent(
+          phone ||
+          "—"
+        ) +
+        "%0A" +
+
+        "Package: " +
+        encodeURIComponent(
+          selectedPackage.name
+        ) +
+        "%0A" +
+
+        "Duration: " +
+        encodeURIComponent(
+          selectedPackage.duration
+        ) +
+        "%0A" +
+
+        "Amount: ৳" +
+        selectedPackage.price +
+        "%0A" +
+
+        "Payment: " +
+        encodeURIComponent(
+          selectedPaymentMethod ||
+          "—"
+        ) +
+        "%0A" +
+
+        "Transaction ID: " +
+        encodeURIComponent(
+          transaction ||
+          "—"
+        ) +
+
+        "%0A%0A" +
+
+        "Please verify this request.";
+
+
+      window.open(
+
+        "https://wa.me/" +
+        SARAKAT_WHATSAPP +
+        "?text=" +
+        text,
+
+        "_blank"
+
+      );
+
+    }
+
+
+    /* ========================================================
+       ESC KEY CLOSE MODAL
+    ========================================================= */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeInvoice();
+
+        }
+
+      }
+    );
+
 
   </script>
+
 
 </body>
 </html>
