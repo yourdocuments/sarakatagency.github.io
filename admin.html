@@ -1,0 +1,2444 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sarakat Agency — Admin Dashboard</title>
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png"
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --dark: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --green: #16a34a;
+      --orange: #ea580c;
+      --red: #dc2626;
+      --purple: #7c3aed;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      height: 70px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .brand-text h2 {
+      font-size: 18px;
+      color: var(--dark);
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .view-site {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 14px;
+      border-radius: 9px;
+      background: #eff6ff;
+    }
+
+    .logout-btn {
+      border: none;
+      background: #fee2e2;
+      color: #b91c1c;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       LAYOUT
+    ========================= */
+
+    .layout {
+      display: flex;
+      min-height: calc(100vh - 70px);
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 22px 14px;
+      flex-shrink: 0;
+    }
+
+    .sidebar-title {
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0 12px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .nav-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      background: transparent;
+      color: #cbd5e1;
+      padding: 12px;
+      margin-bottom: 5px;
+      border-radius: 9px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    .main {
+      flex: 1;
+      padding: 28px;
+      min-width: 0;
+    }
+
+    /* =========================
+       PAGE HEADER
+    ========================= */
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .page-header h1 {
+      color: var(--dark);
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .page-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+
+    .stat-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .stat-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .stat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .icon-blue {
+      background: #dbeafe;
+    }
+
+    .icon-orange {
+      background: #ffedd5;
+    }
+
+    .icon-green {
+      background: #dcfce7;
+    }
+
+    .icon-purple {
+      background: #ede9fe;
+    }
+
+    .icon-red {
+      background: #fee2e2;
+    }
+
+    .stat-card h3 {
+      font-size: 27px;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .stat-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       TOOLBAR
+    ========================= */
+
+    .toolbar {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 230px;
+    }
+
+    .toolbar input,
+    .toolbar select {
+      width: 100%;
+      height: 44px;
+      border: 1px solid #cbd5e1;
+      border-radius: 9px;
+      padding: 0 12px;
+      outline: none;
+      font-size: 14px;
+      background: #ffffff;
+    }
+
+    .toolbar input:focus,
+    .toolbar select:focus {
+      border-color: var(--primary);
+    }
+
+    .tool-btn {
+      height: 44px;
+      border: none;
+      padding: 0 15px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .export-btn {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .delete-all-btn {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    .table-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .table-header {
+      padding: 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .table-header h2 {
+      color: var(--dark);
+      font-size: 18px;
+    }
+
+    .order-count {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1050px;
+    }
+
+    th {
+      background: #f8fafc;
+      color: #475569;
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 15px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 13px;
+      vertical-align: middle;
+    }
+
+    tr:hover td {
+      background: #fafcff;
+    }
+
+    .order-id {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .customer-name {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .customer-phone {
+      color: var(--muted);
+      margin-top: 3px;
+      font-size: 12px;
+    }
+
+    .amount {
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    /* =========================
+       STATUS
+    ========================= */
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .pending {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .confirmed {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .rejected {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .new-order {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .processing {
+      background: #ede9fe;
+      color: #6d28d9;
+    }
+
+    .completed {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .cancelled {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* =========================
+       ACTIONS
+    ========================= */
+
+    .actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      border: none;
+      border-radius: 7px;
+      padding: 7px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .update-btn {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .whatsapp-btn {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .delete-btn {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* =========================
+       EMPTY
+    ========================= */
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    .empty-state .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .empty-state h3 {
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    /* =========================
+       DASHBOARD MESSAGE
+    ========================= */
+
+    .notice {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e40af;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    .mobile-menu {
+      display: none;
+      border: none;
+      background: #f1f5f9;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    @media (max-width: 1200px) {
+
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    }
+
+    @media (max-width: 850px) {
+
+      .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 70px;
+        bottom: 0;
+        z-index: 900;
+        transition: 0.25s ease;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .main {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .view-site {
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .topbar {
+        padding: 0 14px;
+      }
+
+      .main {
+        padding: 15px;
+      }
+
+      .page-header h1 {
+        font-size: 23px;
+      }
+
+      .logout-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+
+      .stats-grid {
+        gap: 10px;
+      }
+
+      .stat-card {
+        padding: 15px;
+      }
+
+    }
+
+    @media (max-width: 430px) {
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       TOP BAR
+  ========================= -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <button
+        class="mobile-menu"
+        id="mobileMenuBtn"
+        type="button"
+      >
+        ☰
+      </button>
+
+      <img
+        src="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png"
+        alt="Sarakat Agency"
+      >
+
+      <div class="brand-text">
+
+        <h2>Sarakat Agency</h2>
+
+        <span>Admin Dashboard</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="top-actions">
+
+      <a
+        href="index.html"
+        class="view-site"
+      >
+        🌐 View Website
+      </a>
+
+      <button
+        type="button"
+        class="logout-btn"
+        id="logoutBtn"
+      >
+        Logout
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <div class="layout">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+    >
+
+      <div class="sidebar-title">
+        Management
+      </div>
+
+      <button
+        class="nav-btn active"
+        data-section="dashboard"
+      >
+        📊 Dashboard
+      </button>
+
+      <button
+        class="nav-btn"
+        data-section="orders"
+      >
+        🧾 Orders
+      </button>
+
+      <button
+        class="nav-btn"
+        data-section="customers"
+      >
+        👥 Customers
+      </button>
+
+      <button
+        class="nav-btn"
+        data-section="reports"
+      >
+        📈 Reports
+      </button>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="main">
+
+
+      <!-- =========================
+           HEADER
+      ========================= -->
+
+      <div class="page-header">
+
+        <div>
+
+          <h1>
+            Admin Dashboard
+          </h1>
+
+          <p>
+            Manage Sarakat Agency customer orders, payments and delivery status.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="notice">
+
+        <strong>Demo System:</strong>
+        Orders are currently stored in this browser's
+        <strong>localStorage</strong>.
+        Firebase/online database can be connected later.
+
+      </div>
+
+
+      <!-- =========================
+           STATS
+      ========================= -->
+
+      <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+
+            <div>
+              <h3 id="totalOrders">
+                0
+              </h3>
+
+              <p>
+                Total Orders
+              </p>
+            </div>
+
+            <div class="stat-icon icon-blue">
+              🧾
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+
+            <div>
+
+              <h3 id="pendingPayments">
+                0
+              </h3>
+
+              <p>
+                Payment Pending
+              </p>
+
+            </div>
+
+            <div class="stat-icon icon-orange">
+              💰
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+
+            <div>
+
+              <h3 id="confirmedPayments">
+                0
+              </h3>
+
+              <p>
+                Payment Confirmed
+              </p>
+
+            </div>
+
+            <div class="stat-icon icon-green">
+              ✅
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+
+            <div>
+
+              <h3 id="processingOrders">
+                0
+              </h3>
+
+              <p>
+                Processing
+              </p>
+
+            </div>
+
+            <div class="stat-icon icon-purple">
+              ⚙️
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+
+            <div>
+
+              <h3 id="completedOrders">
+                0
+              </h3>
+
+              <p>
+                Completed
+              </p>
+
+            </div>
+
+            <div class="stat-icon icon-red">
+              🎉
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+      <!-- =========================
+           TOOLBAR
+      ========================= -->
+
+      <section class="toolbar">
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Order ID, customer, phone, package..."
+          >
+
+        </div>
+
+
+        <div style="min-width:170px;">
+
+          <select id="paymentFilter">
+
+            <option value="all">
+              All Payments
+            </option>
+
+            <option value="Pending">
+              Pending
+            </option>
+
+            <option value="Confirmed">
+              Confirmed
+            </option>
+
+            <option value="Rejected">
+              Rejected
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div style="min-width:170px;">
+
+          <select id="statusFilter">
+
+            <option value="all">
+              All Order Status
+            </option>
+
+            <option value="New Order">
+              New Order
+            </option>
+
+            <option value="Processing">
+              Processing
+            </option>
+
+            <option value="Completed">
+              Completed
+            </option>
+
+            <option value="Cancelled">
+              Cancelled
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="tool-btn export-btn"
+          id="exportBtn"
+        >
+          📥 Export CSV
+        </button>
+
+
+        <button
+          type="button"
+          class="tool-btn delete-all-btn"
+          id="deleteAllBtn"
+        >
+          🗑 Delete All
+        </button>
+
+      </section>
+
+
+      <!-- =========================
+           TABLE
+      ========================= -->
+
+      <section class="table-card">
+
+        <div class="table-header">
+
+          <h2>
+            Customer Orders
+          </h2>
+
+          <span
+            class="order-count"
+            id="orderCount"
+          >
+            0 orders
+          </span>
+
+        </div>
+
+
+        <div
+          class="table-wrap"
+          id="tableContainer"
+        >
+
+          <!-- Table generated by JavaScript -->
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+
+  <script>
+
+    /* =====================================================
+       SARAKAT AGENCY ADMIN DASHBOARD
+       ===================================================== */
+
+
+    /*
+      ==========================================
+      ADMIN SESSION PROTECTION
+      ==========================================
+    */
+
+    const adminLoggedIn =
+      sessionStorage.getItem(
+        "sarakatAdminLoggedIn"
+      );
+
+
+    if (adminLoggedIn !== "true") {
+
+      /*
+        Return to login page.
+      */
+
+      window.location.replace(
+        "admin-login.html"
+      );
+
+    }
+
+
+    /*
+      ==========================================
+      STORAGE
+      ==========================================
+    */
+
+    const ORDERS_STORAGE_KEY =
+      "sarakatOrders";
+
+    const WHATSAPP_NUMBER =
+      "8801705633700";
+
+
+    /*
+      ==========================================
+      DOM ELEMENTS
+      ==========================================
+    */
+
+    const totalOrdersEl =
+      document.getElementById(
+        "totalOrders"
+      );
+
+    const pendingPaymentsEl =
+      document.getElementById(
+        "pendingPayments"
+      );
+
+    const confirmedPaymentsEl =
+      document.getElementById(
+        "confirmedPayments"
+      );
+
+    const processingOrdersEl =
+      document.getElementById(
+        "processingOrders"
+      );
+
+    const completedOrdersEl =
+      document.getElementById(
+        "completedOrders"
+      );
+
+    const searchInput =
+      document.getElementById(
+        "searchInput"
+      );
+
+    const paymentFilter =
+      document.getElementById(
+        "paymentFilter"
+      );
+
+    const statusFilter =
+      document.getElementById(
+        "statusFilter"
+      );
+
+    const tableContainer =
+      document.getElementById(
+        "tableContainer"
+      );
+
+    const orderCount =
+      document.getElementById(
+        "orderCount"
+      );
+
+    const exportBtn =
+      document.getElementById(
+        "exportBtn"
+      );
+
+    const deleteAllBtn =
+      document.getElementById(
+        "deleteAllBtn"
+      );
+
+    const logoutBtn =
+      document.getElementById(
+        "logoutBtn"
+      );
+
+    const mobileMenuBtn =
+      document.getElementById(
+        "mobileMenuBtn"
+      );
+
+    const sidebar =
+      document.getElementById(
+        "sidebar"
+      );
+
+
+    /*
+      ==========================================
+      GET ORDERS
+      ==========================================
+    */
+
+    function getOrders() {
+
+      try {
+
+        const saved =
+          localStorage.getItem(
+            ORDERS_STORAGE_KEY
+          );
+
+        if (!saved) {
+          return [];
+        }
+
+        const orders =
+          JSON.parse(saved);
+
+        return Array.isArray(orders)
+          ? orders
+          : [];
+
+      } catch (error) {
+
+        console.error(
+          "Could not read orders:",
+          error
+        );
+
+        return [];
+
+      }
+
+    }
+
+
+    /*
+      ==========================================
+      SAVE ORDERS
+      ==========================================
+    */
+
+    function saveOrders(orders) {
+
+      localStorage.setItem(
+        ORDERS_STORAGE_KEY,
+        JSON.stringify(orders)
+      );
+
+    }
+
+
+    /*
+      ==========================================
+      STATUS CLASS
+      ==========================================
+    */
+
+    function getPaymentClass(status) {
+
+      if (status === "Confirmed") {
+        return "confirmed";
+      }
+
+      if (status === "Rejected") {
+        return "rejected";
+      }
+
+      return "pending";
+
+    }
+
+
+    function getOrderStatusClass(status) {
+
+      if (status === "Processing") {
+        return "processing";
+      }
+
+      if (status === "Completed") {
+        return "completed";
+      }
+
+      if (status === "Cancelled") {
+        return "cancelled";
+      }
+
+      return "new-order";
+
+    }
+
+
+    /*
+      ==========================================
+      ESCAPE HTML
+      ==========================================
+    */
+
+    function escapeHTML(value) {
+
+      if (
+        value === null ||
+        value === undefined
+      ) {
+        return "";
+      }
+
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    /*
+      ==========================================
+      FORMAT DATE
+      ==========================================
+    */
+
+    function formatDate(dateValue) {
+
+      if (!dateValue) {
+        return "-";
+      }
+
+      const date =
+        new Date(dateValue);
+
+      if (isNaN(date.getTime())) {
+        return escapeHTML(dateValue);
+      }
+
+      return date.toLocaleString(
+        "en-BD",
+        {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+        }
+      );
+
+    }
+
+
+    /*
+      ==========================================
+      UPDATE STATS
+      ==========================================
+    */
+
+    function updateStats() {
+
+      const orders =
+        getOrders();
+
+      let pendingPayments = 0;
+      let confirmedPayments = 0;
+      let processingOrders = 0;
+      let completedOrders = 0;
+
+
+      orders.forEach(function(order) {
+
+        if (
+          order.paymentStatus ===
+          "Pending"
+        ) {
+          pendingPayments++;
+        }
+
+        if (
+          order.paymentStatus ===
+          "Confirmed"
+        ) {
+          confirmedPayments++;
+        }
+
+        if (
+          order.orderStatus ===
+          "Processing"
+        ) {
+          processingOrders++;
+        }
+
+        if (
+          order.orderStatus ===
+          "Completed"
+        ) {
+          completedOrders++;
+        }
+
+      });
+
+
+      totalOrdersEl.textContent =
+        orders.length;
+
+      pendingPaymentsEl.textContent =
+        pendingPayments;
+
+      confirmedPaymentsEl.textContent =
+        confirmedPayments;
+
+      processingOrdersEl.textContent =
+        processingOrders;
+
+      completedOrdersEl.textContent =
+        completedOrders;
+
+    }
+
+
+    /*
+      ==========================================
+      FILTER ORDERS
+      ==========================================
+    */
+
+    function getFilteredOrders() {
+
+      const orders =
+        getOrders();
+
+      const search =
+        searchInput.value
+          .trim()
+          .toLowerCase();
+
+      const payment =
+        paymentFilter.value;
+
+      const status =
+        statusFilter.value;
+
+
+      return orders.filter(
+        function(order) {
+
+          const searchableText = [
+
+            order.id,
+
+            order.customerName,
+
+            order.phone,
+
+            order.email,
+
+            order.package,
+
+            order.paymentMethod,
+
+            order.transactionId
+
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+
+
+          const matchesSearch =
+            !search ||
+            searchableText.includes(
+              search
+            );
+
+
+          const matchesPayment =
+            payment === "all" ||
+            order.paymentStatus ===
+            payment;
+
+
+          const matchesStatus =
+            status === "all" ||
+            order.orderStatus ===
+            status;
+
+
+          return (
+            matchesSearch &&
+            matchesPayment &&
+            matchesStatus
+          );
+
+        }
+      );
+
+    }
+
+
+    /*
+      ==========================================
+      RENDER ORDERS
+      ==========================================
+    */
+
+    function renderOrders() {
+
+      const orders =
+        getFilteredOrders();
+
+
+      orderCount.textContent =
+        orders.length +
+        (
+          orders.length === 1
+            ? " order"
+            : " orders"
+        );
+
+
+      if (orders.length === 0) {
+
+        tableContainer.innerHTML = `
+
+          <div class="empty-state">
+
+            <div class="icon">
+              📭
+            </div>
+
+            <h3>
+              No Orders Found
+            </h3>
+
+            <p>
+              Customer orders will appear here.
+            </p>
+
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+      let html = `
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Order ID
+              </th>
+
+              <th>
+                Customer
+              </th>
+
+              <th>
+                Package
+              </th>
+
+              <th>
+                Amount
+              </th>
+
+              <th>
+                Payment
+              </th>
+
+              <th>
+                Transaction ID
+              </th>
+
+              <th>
+                Order Status
+              </th>
+
+              <th>
+                Date
+              </th>
+
+              <th>
+                Actions
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+      `;
+
+
+      orders.forEach(function(order) {
+
+        const paymentStatus =
+          order.paymentStatus ||
+          "Pending";
+
+        const orderStatus =
+          order.orderStatus ||
+          "New Order";
+
+
+        html += `
+
+          <tr>
+
+            <td>
+
+              <div class="order-id">
+                ${escapeHTML(order.id)}
+              </div>
+
+            </td>
+
+
+            <td>
+
+              <div class="customer-name">
+                ${escapeHTML(order.customerName || "-")}
+              </div>
+
+              <div class="customer-phone">
+                ${escapeHTML(order.phone || "-")}
+              </div>
+
+            </td>
+
+
+            <td>
+              ${escapeHTML(order.package || "-")}
+            </td>
+
+
+            <td>
+
+              <span class="amount">
+                ৳${escapeHTML(order.amount || "0")}
+              </span>
+
+            </td>
+
+
+            <td>
+
+              <span class="badge ${getPaymentClass(paymentStatus)}">
+
+                ${escapeHTML(paymentStatus)}
+
+              </span>
+
+              <div style="font-size:11px;color:#64748b;margin-top:5px;">
+
+                ${escapeHTML(order.paymentMethod || "-")}
+
+              </div>
+
+            </td>
+
+
+            <td>
+
+              <span style="font-size:12px;">
+
+                ${escapeHTML(order.transactionId || "-")}
+
+              </span>
+
+            </td>
+
+
+            <td>
+
+              <span class="badge ${getOrderStatusClass(orderStatus)}">
+
+                ${escapeHTML(orderStatus)}
+
+              </span>
+
+            </td>
+
+
+            <td>
+
+              <span style="font-size:12px;">
+
+                ${formatDate(order.date)}
+
+              </span>
+
+            </td>
+
+
+            <td>
+
+              <div class="actions">
+
+                <button
+                  type="button"
+                  class="action-btn update-btn"
+                  onclick="updateOrder('${encodeURIComponent(order.id)}')"
+                >
+                  ✏️ Update
+                </button>
+
+
+                <button
+                  type="button"
+                  class="action-btn whatsapp-btn"
+                  onclick="contactCustomer('${encodeURIComponent(order.phone || "")}', '${encodeURIComponent(order.customerName || "")}', '${encodeURIComponent(order.id || "")}')"
+                >
+                  💬 WhatsApp
+                </button>
+
+
+                <button
+                  type="button"
+                  class="action-btn delete-btn"
+                  onclick="deleteOrder('${encodeURIComponent(order.id)}')"
+                >
+                  🗑 Delete
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+        `;
+
+      });
+
+
+      html += `
+
+          </tbody>
+
+        </table>
+
+      `;
+
+
+      tableContainer.innerHTML =
+        html;
+
+    }
+
+
+    /*
+      ==========================================
+      UPDATE ORDER
+      ==========================================
+    */
+
+    window.updateOrder =
+      function(encodedId) {
+
+        const orderId =
+          decodeURIComponent(
+            encodedId
+          );
+
+        const orders =
+          getOrders();
+
+        const index =
+          orders.findIndex(
+            function(order) {
+
+              return String(order.id) ===
+                String(orderId);
+
+            }
+          );
+
+
+        if (index === -1) {
+
+          alert(
+            "Order not found."
+          );
+
+          return;
+
+        }
+
+
+        const order =
+          orders[index];
+
+
+        const paymentStatus =
+          prompt(
+            "Payment Status:\n\n" +
+            "1 = Pending\n" +
+            "2 = Confirmed\n" +
+            "3 = Rejected\n\n" +
+            "Current: " +
+            (order.paymentStatus || "Pending"),
+            order.paymentStatus || "Pending"
+          );
+
+
+        if (paymentStatus === null) {
+          return;
+        }
+
+
+        const normalizedPayment =
+          paymentStatus
+            .trim()
+            .toLowerCase();
+
+
+        if (
+          normalizedPayment ===
+          "pending"
+        ) {
+
+          order.paymentStatus =
+            "Pending";
+
+        } else if (
+          normalizedPayment ===
+          "confirmed"
+        ) {
+
+          order.paymentStatus =
+            "Confirmed";
+
+        } else if (
+          normalizedPayment ===
+          "rejected"
+        ) {
+
+          order.paymentStatus =
+            "Rejected";
+
+        } else {
+
+          alert(
+            "Please enter exactly: Pending, Confirmed or Rejected."
+          );
+
+          return;
+
+        }
+
+
+        const orderStatus =
+          prompt(
+            "Order Status:\n\n" +
+            "New Order\n" +
+            "Processing\n" +
+            "Completed\n" +
+            "Cancelled\n\n" +
+            "Current: " +
+            (order.orderStatus || "New Order"),
+            order.orderStatus || "New Order"
+          );
+
+
+        if (orderStatus === null) {
+          return;
+        }
+
+
+        const normalizedOrder =
+          orderStatus
+            .trim()
+            .toLowerCase();
+
+
+        if (
+          normalizedOrder ===
+          "new order"
+        ) {
+
+          order.orderStatus =
+            "New Order";
+
+        } else if (
+          normalizedOrder ===
+          "processing"
+        ) {
+
+          order.orderStatus =
+            "Processing";
+
+        } else if (
+          normalizedOrder ===
+          "completed"
+        ) {
+
+          order.orderStatus =
+            "Completed";
+
+        } else if (
+          normalizedOrder ===
+          "cancelled"
+        ) {
+
+          order.orderStatus =
+            "Cancelled";
+
+        } else {
+
+          alert(
+            "Please enter: New Order, Processing, Completed or Cancelled."
+          );
+
+          return;
+
+        }
+
+
+        saveOrders(orders);
+
+        updateStats();
+
+        renderOrders();
+
+
+        alert(
+          "Order updated successfully."
+        );
+
+      };
+
+
+    /*
+      ==========================================
+      DELETE ORDER
+      ==========================================
+    */
+
+    window.deleteOrder =
+      function(encodedId) {
+
+        const orderId =
+          decodeURIComponent(
+            encodedId
+          );
+
+
+        const confirmed =
+          confirm(
+            "Delete order " +
+            orderId +
+            "?"
+          );
+
+
+        if (!confirmed) {
+          return;
+        }
+
+
+        const orders =
+          getOrders();
+
+
+        const filtered =
+          orders.filter(
+            function(order) {
+
+              return String(order.id) !==
+                String(orderId);
+
+            }
+          );
+
+
+        saveOrders(filtered);
+
+        updateStats();
+
+        renderOrders();
+
+
+      };
+
+
+    /*
+      ==========================================
+      WHATSAPP CUSTOMER
+      ==========================================
+    */
+
+    window.contactCustomer =
+      function(
+        encodedPhone,
+        encodedName,
+        encodedOrderId
+      ) {
+
+        const phone =
+          decodeURIComponent(
+            encodedPhone
+          );
+
+        const name =
+          decodeURIComponent(
+            encodedName
+          );
+
+        const orderId =
+          decodeURIComponent(
+            encodedOrderId
+          );
+
+
+        if (!phone) {
+
+          alert(
+            "Customer phone number is not available."
+          );
+
+          return;
+
+        }
+
+
+        let cleanPhone =
+          phone.replace(
+            /\D/g,
+            ""
+          );
+
+
+        if (
+          cleanPhone.startsWith("01")
+        ) {
+
+          cleanPhone =
+            "880" +
+            cleanPhone.substring(1);
+
+        }
+
+
+        const message =
+          "Hello " +
+          name +
+          ",\n\n" +
+          "This is Sarakat Agency.\n" +
+          "Regarding your order: " +
+          orderId +
+          "\n\n" +
+          "Please let us know if you need any assistance.";
+
+
+        const url =
+          "https://wa.me/" +
+          cleanPhone +
+          "?text=" +
+          encodeURIComponent(
+            message
+          );
+
+
+        window.open(
+          url,
+          "_blank"
+        );
+
+      };
+
+
+    /*
+      ==========================================
+      DELETE ALL
+      ==========================================
+    */
+
+    deleteAllBtn.addEventListener(
+      "click",
+      function() {
+
+        const orders =
+          getOrders();
+
+
+        if (orders.length === 0) {
+
+          alert(
+            "There are no orders to delete."
+          );
+
+          return;
+
+        }
+
+
+        const confirmed =
+          confirm(
+            "Are you sure you want to delete ALL orders?\n\nThis cannot be undone."
+          );
+
+
+        if (!confirmed) {
+          return;
+        }
+
+
+        localStorage.removeItem(
+          ORDERS_STORAGE_KEY
+        );
+
+
+        updateStats();
+
+        renderOrders();
+
+
+        alert(
+          "All orders have been deleted."
+        );
+
+      }
+    );
+
+
+    /*
+      ==========================================
+      SEARCH
+      ==========================================
+    */
+
+    searchInput.addEventListener(
+      "input",
+      renderOrders
+    );
+
+
+    /*
+      ==========================================
+      FILTER
+      ==========================================
+    */
+
+    paymentFilter.addEventListener(
+      "change",
+      renderOrders
+    );
+
+
+    statusFilter.addEventListener(
+      "change",
+      renderOrders
+    );
+
+
+    /*
+      ==========================================
+      EXPORT CSV
+      ==========================================
+    */
+
+    exportBtn.addEventListener(
+      "click",
+      function() {
+
+        const orders =
+          getFilteredOrders();
+
+
+        if (orders.length === 0) {
+
+          alert(
+            "There are no orders to export."
+          );
+
+          return;
+
+        }
+
+
+        const headers = [
+
+          "Order ID",
+          "Customer Name",
+          "Phone",
+          "Email",
+          "Package",
+          "Amount",
+          "Payment Method",
+          "Transaction ID",
+          "Payment Status",
+          "Order Status",
+          "Date"
+
+        ];
+
+
+        const rows =
+          orders.map(
+            function(order) {
+
+              return [
+
+                order.id || "",
+
+                order.customerName || "",
+
+                order.phone || "",
+
+                order.email || "",
+
+                order.package || "",
+
+                order.amount || "",
+
+                order.paymentMethod || "",
+
+                order.transactionId || "",
+
+                order.paymentStatus || "",
+
+                order.orderStatus || "",
+
+                order.date || ""
+
+              ];
+
+            }
+          );
+
+
+        const csvData =
+          [
+            headers,
+            ...rows
+          ]
+            .map(
+              function(row) {
+
+                return row.map(
+                  function(value) {
+
+                    return '"' +
+                      String(value)
+                        .replace(
+                          /"/g,
+                          '""'
+                        ) +
+                      '"';
+
+                  }
+                ).join(",");
+
+              }
+            )
+            .join("\n");
+
+
+        const blob =
+          new Blob(
+            [csvData],
+            {
+              type:
+                "text/csv;charset=utf-8;"
+            }
+          );
+
+
+        const url =
+          URL.createObjectURL(
+            blob
+          );
+
+
+        const link =
+          document.createElement(
+            "a"
+          );
+
+
+        link.href = url;
+
+        link.download =
+          "sarakat-orders-" +
+          new Date()
+            .toISOString()
+            .slice(0, 10) +
+          ".csv";
+
+
+        document.body.appendChild(
+          link
+        );
+
+
+        link.click();
+
+        link.remove();
+
+        URL.revokeObjectURL(
+          url
+        );
+
+      }
+    );
+
+
+    /*
+      ==========================================
+      LOGOUT
+      ==========================================
+    */
+
+    logoutBtn.addEventListener(
+      "click",
+      function() {
+
+        const confirmed =
+          confirm(
+            "Do you want to logout?"
+          );
+
+
+        if (!confirmed) {
+          return;
+        }
+
+
+        sessionStorage.removeItem(
+          "sarakatAdminLoggedIn"
+        );
+
+
+        sessionStorage.removeItem(
+          "sarakatAdminLoginTime"
+        );
+
+
+        window.location.replace(
+          "admin-login.html"
+        );
+
+      }
+    );
+
+
+    /*
+      ==========================================
+      MOBILE SIDEBAR
+      ==========================================
+    */
+
+    mobileMenuBtn.addEventListener(
+      "click",
+      function() {
+
+        sidebar.classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+
+    /*
+      ==========================================
+      SIDEBAR BUTTONS
+      ==========================================
+    */
+
+    document
+      .querySelectorAll(".nav-btn")
+      .forEach(
+        function(button) {
+
+          button.addEventListener(
+            "click",
+            function() {
+
+              document
+                .querySelectorAll(".nav-btn")
+                .forEach(
+                  function(btn) {
+
+                    btn.classList.remove(
+                      "active"
+                    );
+
+                  }
+                );
+
+
+              button.classList.add(
+                "active"
+              );
+
+
+              const section =
+                button.dataset.section;
+
+
+              if (
+                section ===
+                "orders"
+              ) {
+
+                searchInput.focus();
+
+              }
+
+
+              if (
+                section ===
+                "customers"
+              ) {
+
+                alert(
+                  "Customer management will be connected in the next version."
+                );
+
+              }
+
+
+              if (
+                section ===
+                "reports"
+              ) {
+
+                alert(
+                  "Reports section will be expanded in the next version."
+                );
+
+              }
+
+
+              sidebar.classList.remove(
+                "open"
+              );
+
+            }
+          );
+
+        }
+      );
+
+
+    /*
+      ==========================================
+      INITIAL LOAD
+      ==========================================
+    */
+
+    updateStats();
+
+    renderOrders();
+
+
+    /*
+      ==========================================
+      AUTO REFRESH
+      ==========================================
+    */
+
+    setInterval(
+      function() {
+
+        updateStats();
+
+        renderOrders();
+
+      },
+      5000
+    );
+
+  </script>
+
+</body>
+</html>
+```
