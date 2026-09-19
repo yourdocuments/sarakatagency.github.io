@@ -6,16 +6,25 @@
 
   <title>Sarakat Agency | Digital Marketing & Business Solutions</title>
 
-  <meta name="description" content="Sarakat Agency - Facebook Ads, Social Media Management, Website Development and Complete Business Solutions.">
+  <meta
+    name="description"
+    content="Sarakat Agency - Facebook Ads, Social Media Management, Website Development and Complete Business Solutions."
+  >
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png">
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png"
+  >
 
-  <link rel="apple-touch-icon"
-        href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png">
+  <link
+    rel="apple-touch-icon"
+    href="https://raw.githubusercontent.com/yourdocuments/sarakatagency.github.io/main/logo.png"
+  >
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -144,8 +153,17 @@
 
     .hero {
       background:
-        radial-gradient(circle at top right, rgba(47, 128, 237, 0.15), transparent 35%),
-        linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+        radial-gradient(
+          circle at top right,
+          rgba(47, 128, 237, 0.15),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #f8fbff 0%,
+          #eef5ff 100%
+        );
+
       padding: 85px 20px 80px;
       overflow: hidden;
     }
@@ -646,7 +664,11 @@
 
     .order-section {
       background:
-        linear-gradient(135deg,#eef5ff,#f9fbff);
+        linear-gradient(
+          135deg,
+          #eef5ff,
+          #f9fbff
+        );
     }
 
     .order-wrapper {
@@ -875,6 +897,241 @@
     }
 
     /* =========================
+       ORDER TRACKING
+    ========================= */
+
+    .tracking-section {
+      background: #fff;
+    }
+
+    .tracking-wrapper {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      border: 1px solid #e1e7f0;
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 15px 45px rgba(16,24,40,0.06);
+    }
+
+    .tracking-search {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tracking-search input {
+      flex: 1;
+      min-width: 0;
+      padding: 14px 16px;
+      border: 1px solid #d0d5dd;
+      border-radius: 11px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .tracking-search input:focus {
+      border-color: #175cd3;
+      box-shadow: 0 0 0 3px rgba(23,92,211,0.10);
+    }
+
+    .tracking-result {
+      display: none;
+      border: 1px solid #e4e8ef;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .tracking-result.show {
+      display: block;
+    }
+
+    .tracking-result-header {
+      background: #f8fafc;
+      padding: 20px;
+      border-bottom: 1px solid #e4e8ef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .tracking-result-header h3 {
+      font-size: 18px;
+      color: #101828;
+    }
+
+    .tracking-result-header p {
+      font-size: 12px;
+      color: #667085;
+      margin-top: 3px;
+    }
+
+    .tracking-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .badge-pending {
+      background: #fff8eb;
+      color: #b54708;
+    }
+
+    .badge-confirmed {
+      background: #ecfdf3;
+      color: #027a48;
+    }
+
+    .badge-rejected {
+      background: #fef3f2;
+      color: #b42318;
+    }
+
+    .badge-new {
+      background: #eef4ff;
+      color: #175cd3;
+    }
+
+    .badge-processing {
+      background: #fff8eb;
+      color: #b54708;
+    }
+
+    .badge-completed {
+      background: #ecfdf3;
+      color: #027a48;
+    }
+
+    .badge-cancelled {
+      background: #fef3f2;
+      color: #b42318;
+    }
+
+    .tracking-details {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 13px;
+    }
+
+    .tracking-detail {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .tracking-detail span {
+      display: block;
+      font-size: 11px;
+      color: #667085;
+      margin-bottom: 3px;
+    }
+
+    .tracking-detail strong {
+      display: block;
+      font-size: 14px;
+      color: #101828;
+      word-break: break-word;
+    }
+
+    .tracking-timeline {
+      padding: 5px 20px 25px;
+    }
+
+    .timeline-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: #e4e7ec;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: flex;
+      gap: 15px;
+      padding-bottom: 18px;
+    }
+
+    .timeline-dot {
+      position: relative;
+      z-index: 2;
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #e4e7ec;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+    }
+
+    .timeline-item.active .timeline-dot {
+      background: #175cd3;
+      color: #fff;
+    }
+
+    .timeline-item.done .timeline-dot {
+      background: #12b76a;
+      color: #fff;
+    }
+
+    .timeline-content strong {
+      display: block;
+      font-size: 13px;
+      color: #344054;
+    }
+
+    .timeline-content span {
+      display: block;
+      font-size: 11px;
+      color: #98a2b3;
+    }
+
+    .tracking-error {
+      display: none;
+      padding: 17px;
+      border-radius: 12px;
+      background: #fef3f2;
+      border: 1px solid #fecdca;
+      color: #b42318;
+      font-size: 13px;
+    }
+
+    .tracking-error.show {
+      display: block;
+    }
+
+    .tracking-help {
+      margin-top: 17px;
+      padding: 13px 15px;
+      background: #eef4ff;
+      border-radius: 11px;
+      color: #175cd3;
+      font-size: 12px;
+    }
+
+    /* =========================
        CONTACT
     ========================= */
 
@@ -1019,7 +1276,7 @@
     }
 
     /* =========================
-       WHATSAPP FLOAT
+       WHATSAPP
     ========================= */
 
     .whatsapp-float {
@@ -1191,7 +1448,8 @@
         grid-column: auto;
       }
 
-      .order-wrapper {
+      .order-wrapper,
+      .tracking-wrapper {
         padding: 20px;
       }
 
@@ -1211,11 +1469,29 @@
         width: 42%;
       }
 
+      .tracking-search {
+        flex-direction: column;
+      }
+
+      .tracking-search .btn {
+        width: 100%;
+      }
+
+      .tracking-result-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .tracking-details {
+        grid-template-columns: 1fr;
+      }
+
       .whatsapp-float {
         right: 15px;
         bottom: 15px;
       }
     }
+
   </style>
 </head>
 
@@ -1255,14 +1531,25 @@
       <nav class="nav-links" id="navLinks">
 
         <a href="#home">Home</a>
+
         <a href="#services">Services</a>
+
         <a href="#packages">Packages</a>
+
         <a href="#how">How It Works</a>
+
+        <a href="#tracking">Track Order</a>
+
         <a href="#portfolio">Portfolio</a>
+
         <a href="#about">About</a>
+
         <a href="#contact">Contact</a>
 
-        <a href="#order" class="nav-cta">
+        <a
+          href="#order"
+          class="nav-cta"
+        >
           Order Now
         </a>
 
@@ -1302,12 +1589,18 @@
 
           <div class="hero-buttons">
 
-            <a href="#packages" class="btn btn-primary">
+            <a
+              href="#packages"
+              class="btn btn-primary"
+            >
               View Packages →
             </a>
 
-            <a href="#order" class="btn btn-secondary">
-              Start Your Order
+            <a
+              href="#tracking"
+              class="btn btn-secondary"
+            >
+              Track My Order
             </a>
 
           </div>
@@ -1354,8 +1647,8 @@
           </div>
 
           <div class="hero-note">
-            💡 আপনার ব্যবসার জন্য package নির্বাচন করুন এবং
-            সরাসরি order submit করুন।
+            💡 Package নির্বাচন করুন, order করুন এবং
+            Order ID দিয়ে পরে status track করুন।
           </div>
 
         </div>
@@ -1369,7 +1662,10 @@
          SERVICES
     ========================= -->
 
-    <section class="section" id="services">
+    <section
+      class="section"
+      id="services"
+    >
 
       <div class="section-container">
 
@@ -1393,9 +1689,13 @@
 
           <div class="service-card">
 
-            <div class="service-icon">📣</div>
+            <div class="service-icon">
+              📣
+            </div>
 
-            <h3>Facebook Ads</h3>
+            <h3>
+              Facebook Ads
+            </h3>
 
             <p>
               Targeted Facebook advertising এবং campaign monitoring।
@@ -1406,9 +1706,13 @@
 
           <div class="service-card">
 
-            <div class="service-icon">📱</div>
+            <div class="service-icon">
+              📱
+            </div>
 
-            <h3>Social Media</h3>
+            <h3>
+              Social Media
+            </h3>
 
             <p>
               Content, post design এবং social media page management।
@@ -1419,9 +1723,13 @@
 
           <div class="service-card">
 
-            <div class="service-icon">🌐</div>
+            <div class="service-icon">
+              🌐
+            </div>
 
-            <h3>Website</h3>
+            <h3>
+              Website
+            </h3>
 
             <p>
               Modern responsive business website development।
@@ -1432,9 +1740,13 @@
 
           <div class="service-card">
 
-            <div class="service-icon">📊</div>
+            <div class="service-icon">
+              📊
+            </div>
 
-            <h3>Business Growth</h3>
+            <h3>
+              Business Growth
+            </h3>
 
             <p>
               Digital strategy, optimization এবং business support।
@@ -1453,13 +1765,18 @@
          PACKAGES
     ========================= -->
 
-    <section class="section packages-section" id="packages">
+    <section
+      class="section packages-section"
+      id="packages"
+    >
 
       <div class="section-container">
 
         <div class="section-heading">
 
-          <small>Simple Packages</small>
+          <small>
+            Simple Packages
+          </small>
 
           <h2>
             Customer প্রশ্ন না করেই Package বুঝতে পারবেন
@@ -1483,7 +1800,9 @@
               🟢 Small Business
             </div>
 
-            <h3>Starter Ads</h3>
+            <h3>
+              Starter Ads
+            </h3>
 
             <div class="package-target">
               ছোট local business-এর জন্য
@@ -1496,10 +1815,21 @@
 
             <ul class="package-list">
 
-              <li>Facebook Ads</li>
-              <li>Targeting</li>
-              <li>Campaign Monitoring</li>
-              <li>Basic Campaign Setup</li>
+              <li>
+                Facebook Ads
+              </li>
+
+              <li>
+                Targeting
+              </li>
+
+              <li>
+                Campaign Monitoring
+              </li>
+
+              <li>
+                Basic Campaign Setup
+              </li>
 
             </ul>
 
@@ -1526,7 +1856,9 @@
               🔵 Growing Business
             </div>
 
-            <h3>Growth</h3>
+            <h3>
+              Growth
+            </h3>
 
             <div class="package-target">
               দ্রুত growth করতে চাওয়া business
@@ -1539,10 +1871,21 @@
 
             <ul class="package-list">
 
-              <li>Facebook Ads</li>
-              <li>Creative Guidance</li>
-              <li>Campaign Optimization</li>
-              <li>Performance Report</li>
+              <li>
+                Facebook Ads
+              </li>
+
+              <li>
+                Creative Guidance
+              </li>
+
+              <li>
+                Campaign Optimization
+              </li>
+
+              <li>
+                Performance Report
+              </li>
 
             </ul>
 
@@ -1565,7 +1908,9 @@
               🟣 Established Business
             </div>
 
-            <h3>Business Pro</h3>
+            <h3>
+              Business Pro
+            </h3>
 
             <div class="package-target">
               বড় বা established business
@@ -1578,10 +1923,21 @@
 
             <ul class="package-list">
 
-              <li>Multiple Campaign</li>
-              <li>Advanced Optimization</li>
-              <li>Campaign Monitoring</li>
-              <li>Monthly Report</li>
+              <li>
+                Multiple Campaign
+              </li>
+
+              <li>
+                Advanced Optimization
+              </li>
+
+              <li>
+                Campaign Monitoring
+              </li>
+
+              <li>
+                Monthly Report
+              </li>
 
             </ul>
 
@@ -1604,7 +1960,9 @@
               🟠 Monthly Service
             </div>
 
-            <h3>Social Media</h3>
+            <h3>
+              Social Media
+            </h3>
 
             <div class="package-target">
               Facebook / social page management
@@ -1617,10 +1975,21 @@
 
             <ul class="package-list">
 
-              <li>Post Design</li>
-              <li>Content Support</li>
-              <li>Page Management</li>
-              <li>Regular Updates</li>
+              <li>
+                Post Design
+              </li>
+
+              <li>
+                Content Support
+              </li>
+
+              <li>
+                Page Management
+              </li>
+
+              <li>
+                Regular Updates
+              </li>
 
             </ul>
 
@@ -1643,7 +2012,9 @@
               🔴 One-Time Service
             </div>
 
-            <h3>Website</h3>
+            <h3>
+              Website
+            </h3>
 
             <div class="package-target">
               Business-এর জন্য modern website
@@ -1656,10 +2027,21 @@
 
             <ul class="package-list">
 
-              <li>Modern Website</li>
-              <li>Responsive Design</li>
-              <li>Business Sections</li>
-              <li>Maintenance Support</li>
+              <li>
+                Modern Website
+              </li>
+
+              <li>
+                Responsive Design
+              </li>
+
+              <li>
+                Business Sections
+              </li>
+
+              <li>
+                Maintenance Support
+              </li>
 
             </ul>
 
@@ -1674,7 +2056,7 @@
           </div>
 
 
-          <!-- COMPLETE -->
+          <!-- COMPLETE BUSINESS -->
 
           <div class="package-card">
 
@@ -1682,7 +2064,9 @@
               🟡 Complete Solution
             </div>
 
-            <h3>Complete Business</h3>
+            <h3>
+              Complete Business
+            </h3>
 
             <div class="package-target">
               Website + Social + Advertising
@@ -1695,10 +2079,21 @@
 
             <ul class="package-list">
 
-              <li>Business Website</li>
-              <li>Social Media Management</li>
-              <li>Facebook Ads</li>
-              <li>Complete Digital Support</li>
+              <li>
+                Business Website
+              </li>
+
+              <li>
+                Social Media Management
+              </li>
+
+              <li>
+                Facebook Ads
+              </li>
+
+              <li>
+                Complete Digital Support
+              </li>
 
             </ul>
 
@@ -1723,20 +2118,25 @@
          HOW IT WORKS
     ========================= -->
 
-    <section class="section" id="how">
+    <section
+      class="section"
+      id="how"
+    >
 
       <div class="section-container">
 
         <div class="section-heading">
 
-          <small>How It Works</small>
+          <small>
+            How It Works
+          </small>
 
           <h2>
             মাত্র ৪টি সহজ ধাপ
           </h2>
 
           <p>
-            Package থেকে order পর্যন্ত পুরো process সহজ রাখা হয়েছে।
+            Package থেকে order tracking পর্যন্ত পুরো process সহজ রাখা হয়েছে।
           </p>
 
         </div>
@@ -1746,9 +2146,13 @@
 
           <div class="step-card">
 
-            <div class="step-number">1</div>
+            <div class="step-number">
+              1
+            </div>
 
-            <h3>Package Select</h3>
+            <h3>
+              Package Select
+            </h3>
 
             <p>
               আপনার business অনুযায়ী package নির্বাচন করুন।
@@ -1759,9 +2163,13 @@
 
           <div class="step-card">
 
-            <div class="step-number">2</div>
+            <div class="step-number">
+              2
+            </div>
 
-            <h3>Information</h3>
+            <h3>
+              Information
+            </h3>
 
             <p>
               আপনার নাম, phone এবং প্রয়োজনীয় তথ্য দিন।
@@ -1772,9 +2180,13 @@
 
           <div class="step-card">
 
-            <div class="step-number">3</div>
+            <div class="step-number">
+              3
+            </div>
 
-            <h3>Order Submit</h3>
+            <h3>
+              Order Submit
+            </h3>
 
             <p>
               Payment method ও transaction information দিয়ে submit করুন।
@@ -1785,13 +2197,316 @@
 
           <div class="step-card">
 
-            <div class="step-number">4</div>
+            <div class="step-number">
+              4
+            </div>
 
-            <h3>We Contact You</h3>
+            <h3>
+              Track Order
+            </h3>
 
             <p>
-              Order review করে WhatsApp-এর মাধ্যমে যোগাযোগ করা হবে।
+              পাওয়া Order ID দিয়ে পরে order status দেখতে পারবেন।
             </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER TRACKING
+    ========================= -->
+
+    <section
+      class="section tracking-section"
+      id="tracking"
+    >
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <small>
+            Order Tracking
+          </small>
+
+          <h2>
+            আপনার Order Track করুন
+          </h2>
+
+          <p>
+            Order submit করার পর পাওয়া Order ID এখানে লিখুন।
+          </p>
+
+        </div>
+
+
+        <div class="tracking-wrapper">
+
+          <div class="tracking-search">
+
+            <input
+              type="text"
+              id="trackingOrderId"
+              placeholder="যেমন: SAR-20260920-1234"
+              autocomplete="off"
+            >
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="trackOrderBtn"
+            >
+              🔎 Track Order
+            </button>
+
+          </div>
+
+
+          <div
+            class="tracking-error"
+            id="trackingError"
+          >
+            এই Order ID-এর কোনো order পাওয়া যায়নি।
+            Order ID সঠিকভাবে লিখে আবার চেষ্টা করুন।
+          </div>
+
+
+          <div
+            class="tracking-result"
+            id="trackingResult"
+          >
+
+            <div class="tracking-result-header">
+
+              <div>
+
+                <h3 id="trackingTitle">
+                  Order Found
+                </h3>
+
+                <p id="trackingDate">
+                  Order Date
+                </p>
+
+              </div>
+
+              <div
+                class="tracking-badge badge-new"
+                id="trackingStatusBadge"
+              >
+                New Order
+              </div>
+
+            </div>
+
+
+            <div class="tracking-details">
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Order ID
+                </span>
+
+                <strong id="trackOrderIdValue">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Package
+                </span>
+
+                <strong id="trackPackage">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Customer
+                </span>
+
+                <strong id="trackCustomer">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Amount
+                </span>
+
+                <strong id="trackAmount">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Payment Method
+                </span>
+
+                <strong id="trackPaymentMethod">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Payment Status
+                </span>
+
+                <strong id="trackPaymentStatus">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Transaction ID
+                </span>
+
+                <strong id="trackTransaction">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="tracking-detail">
+
+                <span>
+                  Current Order Status
+                </span>
+
+                <strong id="trackOrderStatus">
+                  -
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="tracking-timeline">
+
+              <div class="timeline-title">
+                Order Progress
+              </div>
+
+
+              <div class="timeline">
+
+                <div
+                  class="timeline-item"
+                  id="timelineNew"
+                >
+
+                  <div class="timeline-dot">
+                    1
+                  </div>
+
+                  <div class="timeline-content">
+
+                    <strong>
+                      Order Received
+                    </strong>
+
+                    <span>
+                      আপনার order আমাদের system-এ এসেছে।
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <div
+                  class="timeline-item"
+                  id="timelineProcessing"
+                >
+
+                  <div class="timeline-dot">
+                    2
+                  </div>
+
+                  <div class="timeline-content">
+
+                    <strong>
+                      Processing
+                    </strong>
+
+                    <span>
+                      Order processing চলছে।
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <div
+                  class="timeline-item"
+                  id="timelineCompleted"
+                >
+
+                  <div class="timeline-dot">
+                    3
+                  </div>
+
+                  <div class="timeline-content">
+
+                    <strong>
+                      Completed
+                    </strong>
+
+                    <span>
+                      Order successfully completed।
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="tracking-help">
+
+            💡 <strong>Order ID কোথায় পাবেন?</strong>
+            Order submit করার পর confirmation box এবং invoice-এ
+            আপনার unique Order ID দেখানো হবে।
 
           </div>
 
@@ -1806,13 +2521,18 @@
          PORTFOLIO
     ========================= -->
 
-    <section class="section" id="portfolio">
+    <section
+      class="section"
+      id="portfolio"
+    >
 
       <div class="section-container">
 
         <div class="section-heading">
 
-          <small>Portfolio</small>
+          <small>
+            Portfolio
+          </small>
 
           <h2>
             Digital Business Projects
@@ -1835,7 +2555,9 @@
 
             <div class="portfolio-content">
 
-              <h3>Local Shopping Business</h3>
+              <h3>
+                Local Shopping Business
+              </h3>
 
               <p>
                 Local product এবং brand promotion-এর জন্য digital presence।
@@ -1854,7 +2576,9 @@
 
             <div class="portfolio-content">
 
-              <h3>Social Media Branding</h3>
+              <h3>
+                Social Media Branding
+              </h3>
 
               <p>
                 Business page এবং content-based social media presence।
@@ -1873,7 +2597,9 @@
 
             <div class="portfolio-content">
 
-              <h3>Business Website</h3>
+              <h3>
+                Business Website
+              </h3>
 
               <p>
                 Responsive modern business website solution।
@@ -1894,7 +2620,10 @@
          ABOUT
     ========================= -->
 
-    <section class="section" id="about">
+    <section
+      class="section"
+      id="about"
+    >
 
       <div class="section-container">
 
@@ -1902,7 +2631,12 @@
 
           <div class="about-box">
 
-            <small style="color:#175cd3;font-weight:800;">
+            <small
+              style="
+                color:#175cd3;
+                font-weight:800;
+              "
+            >
               ABOUT SARAKAT
             </small>
 
@@ -1928,11 +2662,15 @@
 
             <div class="about-point">
 
-              <span>🎯</span>
+              <span>
+                🎯
+              </span>
 
               <div>
 
-                <strong>Business Focused</strong>
+                <strong>
+                  Business Focused
+                </strong>
 
                 <small>
                   আপনার business goal অনুযায়ী digital service।
@@ -1945,11 +2683,15 @@
 
             <div class="about-point">
 
-              <span>💻</span>
+              <span>
+                💻
+              </span>
 
               <div>
 
-                <strong>Modern Digital Solutions</strong>
+                <strong>
+                  Modern Digital Solutions
+                </strong>
 
                 <small>
                   Website, marketing এবং social media support।
@@ -1962,11 +2704,15 @@
 
             <div class="about-point">
 
-              <span>📋</span>
+              <span>
+                📋
+              </span>
 
               <div>
 
-                <strong>Simple Packages</strong>
+                <strong>
+                  Simple Packages
+                </strong>
 
                 <small>
                   পরিষ্কার package এবং transparent pricing।
@@ -1979,11 +2725,15 @@
 
             <div class="about-point">
 
-              <span>🤝</span>
+              <span>
+                🤝
+              </span>
 
               <div>
 
-                <strong>Direct Communication</strong>
+                <strong>
+                  Direct Communication
+                </strong>
 
                 <small>
                   Order-এর পর সরাসরি customer communication।
@@ -2006,13 +2756,18 @@
          ORDER
     ========================= -->
 
-    <section class="section order-section" id="order">
+    <section
+      class="section order-section"
+      id="order"
+    >
 
       <div class="section-container">
 
         <div class="section-heading">
 
-          <small>Place Your Order</small>
+          <small>
+            Place Your Order
+          </small>
 
           <h2>
             আপনার Order Submit করুন
@@ -2049,7 +2804,10 @@
                   Select Package *
                 </label>
 
-                <select id="packageSelect" required>
+                <select
+                  id="packageSelect"
+                  required
+                >
 
                   <option value="">
                     -- Select Package --
@@ -2167,7 +2925,10 @@
                   Payment Method *
                 </label>
 
-                <select id="paymentMethod" required>
+                <select
+                  id="paymentMethod"
+                  required
+                >
 
                   <option value="">
                     -- Select Payment Method --
@@ -2289,7 +3050,9 @@
           </form>
 
 
-          <!-- SUCCESS -->
+          <!-- =========================
+               SUCCESS
+          ========================= -->
 
           <div
             class="success-box"
@@ -2310,7 +3073,8 @@
             </p>
 
             <p>
-              আপনার order information সংরক্ষণ করা হয়েছে।
+              এই Order ID সংরক্ষণ করুন।
+              ভবিষ্যতে এটি দিয়ে Order Track করতে পারবেন।
             </p>
 
 
@@ -2470,13 +3234,18 @@
          CONTACT
     ========================= -->
 
-    <section class="section" id="contact">
+    <section
+      class="section"
+      id="contact"
+    >
 
       <div class="section-container">
 
         <div class="section-heading">
 
-          <small>Contact Us</small>
+          <small>
+            Contact Us
+          </small>
 
           <h2>
             Sarakat Agency-এর সাথে যোগাযোগ
@@ -2565,7 +3334,13 @@
               Ready to Start?
             </h3>
 
-            <p style="color:#667085;font-size:14px;margin-bottom:18px;">
+            <p
+              style="
+                color:#667085;
+                font-size:14px;
+                margin-bottom:18px;
+              "
+            >
               আপনার প্রয়োজন অনুযায়ী package নির্বাচন করে
               এখনই order submit করুন।
             </p>
@@ -2628,10 +3403,25 @@
             Quick Links
           </h3>
 
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#packages">Packages</a>
-          <a href="#order">Order</a>
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#packages">
+            Packages
+          </a>
+
+          <a href="#tracking">
+            Track Order
+          </a>
+
+          <a href="#order">
+            Order
+          </a>
 
         </div>
 
@@ -2642,7 +3432,10 @@
             Contact
           </h3>
 
-          <a href="https://wa.me/8801705633700" target="_blank">
+          <a
+            href="https://wa.me/8801705633700"
+            target="_blank"
+          >
             WhatsApp: 01705633700
           </a>
 
@@ -2657,8 +3450,10 @@
 
       <div class="copyright">
 
-        © <span id="year"></span>
-        Sarakat Agency. All Rights Reserved.
+        ©
+        <span id="year"></span>
+        Sarakat Agency.
+        All Rights Reserved.
 
       </div>
 
@@ -2699,9 +3494,11 @@
        BASIC SETTINGS
     ===================================== */
 
-    const WHATSAPP_NUMBER = "8801705633700";
+    const WHATSAPP_NUMBER =
+      "8801705633700";
 
-    const ORDERS_STORAGE_KEY = "sarakatOrders";
+    const ORDERS_STORAGE_KEY =
+      "sarakatOrders";
 
 
     /* =====================================
@@ -2709,53 +3506,122 @@
     ===================================== */
 
     const menuBtn =
-      document.getElementById("menuBtn");
+      document.getElementById(
+        "menuBtn"
+      );
 
     const navLinks =
-      document.getElementById("navLinks");
+      document.getElementById(
+        "navLinks"
+      );
 
     const orderForm =
-      document.getElementById("orderForm");
+      document.getElementById(
+        "orderForm"
+      );
 
     const packageSelect =
-      document.getElementById("packageSelect");
+      document.getElementById(
+        "packageSelect"
+      );
 
     const amountDisplay =
-      document.getElementById("amountDisplay");
+      document.getElementById(
+        "amountDisplay"
+      );
 
     const selectedPackage =
-      document.getElementById("selectedPackage");
+      document.getElementById(
+        "selectedPackage"
+      );
 
     const selectedPackageText =
-      document.getElementById("selectedPackageText");
+      document.getElementById(
+        "selectedPackageText"
+      );
 
     const successBox =
-      document.getElementById("successBox");
+      document.getElementById(
+        "successBox"
+      );
 
     const successOrderId =
-      document.getElementById("successOrderId");
+      document.getElementById(
+        "successOrderId"
+      );
 
     const printInvoiceBtn =
-      document.getElementById("printInvoiceBtn");
+      document.getElementById(
+        "printInvoiceBtn"
+      );
 
     const whatsappOrderBtn =
-      document.getElementById("whatsappOrderBtn");
+      document.getElementById(
+        "whatsappOrderBtn"
+      );
 
     const newOrderBtn =
-      document.getElementById("newOrderBtn");
+      document.getElementById(
+        "newOrderBtn"
+      );
 
     const resetBtn =
-      document.getElementById("resetBtn");
+      document.getElementById(
+        "resetBtn"
+      );
+
+
+    /* Tracking elements */
+
+    const trackingOrderId =
+      document.getElementById(
+        "trackingOrderId"
+      );
+
+    const trackOrderBtn =
+      document.getElementById(
+        "trackOrderBtn"
+      );
+
+    const trackingResult =
+      document.getElementById(
+        "trackingResult"
+      );
+
+    const trackingError =
+      document.getElementById(
+        "trackingError"
+      );
+
+    const trackingTitle =
+      document.getElementById(
+        "trackingTitle"
+      );
+
+    const trackingDate =
+      document.getElementById(
+        "trackingDate"
+      );
+
+    const trackingStatusBadge =
+      document.getElementById(
+        "trackingStatusBadge"
+      );
+
 
     const toast =
-      document.getElementById("toast");
+      document.getElementById(
+        "toast"
+      );
 
 
     /* =====================================
        YEAR
     ===================================== */
 
-    document.getElementById("year").textContent =
+    document.getElementById(
+      "year"
+    ).textContent =
       new Date().getFullYear();
 
 
@@ -2763,22 +3629,36 @@
        MOBILE MENU
     ===================================== */
 
-    menuBtn.addEventListener("click", function () {
+    menuBtn.addEventListener(
+      "click",
+      function() {
 
-      navLinks.classList.toggle("active");
+        navLinks.classList.toggle(
+          "active"
+        );
 
-    });
+      }
+    );
 
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
+    document
+      .querySelectorAll(
+        ".nav-links a"
+      )
+      .forEach(function(link) {
 
-      link.addEventListener("click", function() {
+        link.addEventListener(
+          "click",
+          function() {
 
-        navLinks.classList.remove("active");
+            navLinks.classList.remove(
+              "active"
+            );
+
+          }
+        );
 
       });
-
-    });
 
 
     /* =====================================
@@ -2787,62 +3667,94 @@
 
     function showToast(message) {
 
-      toast.textContent = message;
+      toast.textContent =
+        message;
 
-      toast.classList.add("show");
+      toast.classList.add(
+        "show"
+      );
 
-      setTimeout(function() {
+      setTimeout(
+        function() {
 
-        toast.classList.remove("show");
+          toast.classList.remove(
+            "show"
+          );
 
-      }, 3000);
+        },
+        3000
+      );
 
     }
 
 
     /* =====================================
-       FORMAT MONEY
+       MONEY
     ===================================== */
 
     function formatMoney(amount) {
 
-      return "৳" + Number(amount).toLocaleString("en-US");
+      return (
+        "৳" +
+        Number(amount).toLocaleString(
+          "en-US"
+        )
+      );
 
     }
 
 
     /* =====================================
-       UPDATE PACKAGE
+       PACKAGE
     ===================================== */
 
     function updatePackage() {
 
       const selectedOption =
-        packageSelect.options[packageSelect.selectedIndex];
+        packageSelect.options[
+          packageSelect.selectedIndex
+        ];
 
-      if (!selectedOption || !selectedOption.value) {
 
-        amountDisplay.textContent = "৳0";
+      if (
+        !selectedOption ||
+        !selectedOption.value
+      ) {
 
-        selectedPackage.style.display = "none";
+        amountDisplay.textContent =
+          "৳0";
+
+        selectedPackage.style.display =
+          "none";
 
         return;
 
       }
 
+
       const packageName =
         selectedOption.value;
 
+
       const amount =
-        Number(selectedOption.dataset.amount || 0);
+        Number(
+          selectedOption.dataset.amount ||
+          0
+        );
+
 
       amountDisplay.textContent =
         formatMoney(amount);
 
-      selectedPackageText.textContent =
-        packageName + " — " + formatMoney(amount);
 
-      selectedPackage.style.display = "block";
+      selectedPackageText.textContent =
+        packageName +
+        " — " +
+        formatMoney(amount);
+
+
+      selectedPackage.style.display =
+        "block";
 
     }
 
@@ -2857,32 +3769,39 @@
        PACKAGE BUTTONS
     ===================================== */
 
-    document.querySelectorAll(".package-btn").forEach(function(button) {
+    document
+      .querySelectorAll(
+        ".package-btn"
+      )
+      .forEach(function(button) {
 
-      button.addEventListener("click", function() {
+        button.addEventListener(
+          "click",
+          function() {
 
-        const packageName =
-          button.dataset.package;
+            const packageName =
+              button.dataset.package;
 
-        const amount =
-          button.dataset.amount;
 
-        packageSelect.value =
-          packageName;
+            packageSelect.value =
+              packageName;
 
-        updatePackage();
 
-        amountDisplay.textContent =
-          formatMoney(amount);
+            updatePackage();
 
-        document.getElementById("order")
-          .scrollIntoView({
-            behavior: "smooth"
-          });
+
+            document
+              .getElementById(
+                "order"
+              )
+              .scrollIntoView({
+                behavior: "smooth"
+              });
+
+          }
+        );
 
       });
-
-    });
 
 
     /* =====================================
@@ -2894,26 +3813,45 @@
       const now =
         new Date();
 
+
       const year =
         now.getFullYear();
 
+
       const month =
-        String(now.getMonth() + 1)
-          .padStart(2, "0");
+        String(
+          now.getMonth() + 1
+        ).padStart(
+          2,
+          "0"
+        );
+
 
       const day =
-        String(now.getDate())
-          .padStart(2, "0");
+        String(
+          now.getDate()
+        ).padStart(
+          2,
+          "0"
+        );
+
 
       const random =
-        Math.floor(1000 + Math.random() * 9000);
+        Math.floor(
+          1000 +
+          Math.random() *
+          9000
+        );
 
-      return "SAR-" +
+
+      return (
+        "SAR-" +
         year +
         month +
         day +
         "-" +
-        random;
+        random
+      );
 
     }
 
@@ -2931,14 +3869,21 @@
             ORDERS_STORAGE_KEY
           );
 
+
         if (!saved) {
           return [];
         }
 
-        const orders =
-          JSON.parse(saved);
 
-        return Array.isArray(orders)
+        const orders =
+          JSON.parse(
+            saved
+          );
+
+
+        return Array.isArray(
+          orders
+        )
           ? orders
           : [];
 
@@ -2965,24 +3910,34 @@
       const orders =
         getOrders();
 
-      orders.unshift(order);
+
+      orders.unshift(
+        order
+      );
+
 
       localStorage.setItem(
         ORDERS_STORAGE_KEY,
-        JSON.stringify(orders)
+        JSON.stringify(
+          orders
+        )
       );
 
     }
 
 
     /* =====================================
-       FORM VALIDATION
+       PHONE VALIDATION
     ===================================== */
 
     function validatePhone(phone) {
 
       const cleanPhone =
-        phone.replace(/\s+/g, "");
+        phone.replace(
+          /\s+/g,
+          ""
+        );
+
 
       return /^01[3-9]\d{8}$/.test(
         cleanPhone
@@ -2992,11 +3947,15 @@
 
 
     /* =====================================
-       INVOICE
+       CURRENT ORDER
     ===================================== */
 
     let currentOrder = null;
 
+
+    /* =====================================
+       INVOICE
+    ===================================== */
 
     function showInvoice(order) {
 
@@ -3005,45 +3964,57 @@
       ).textContent =
         order.id;
 
+
       document.getElementById(
         "invoiceDate"
       ).textContent =
         order.date;
+
 
       document.getElementById(
         "invoiceCustomer"
       ).textContent =
         order.customerName;
 
+
       document.getElementById(
         "invoicePhone"
       ).textContent =
         order.phone;
 
+
       document.getElementById(
         "invoiceEmail"
       ).textContent =
-        order.email || "Not provided";
+        order.email ||
+        "Not provided";
+
 
       document.getElementById(
         "invoicePackage"
       ).textContent =
         order.package;
 
+
       document.getElementById(
         "invoicePayment"
       ).textContent =
         order.paymentMethod;
 
+
       document.getElementById(
         "invoiceTransaction"
       ).textContent =
-        order.transactionId || "Not provided";
+        order.transactionId ||
+        "Not provided";
+
 
       document.getElementById(
         "invoiceAmount"
       ).textContent =
-        formatMoney(order.amount);
+        formatMoney(
+          order.amount
+        );
 
     }
 
@@ -3062,14 +4033,17 @@
         const packageName =
           packageSelect.value;
 
+
         const selectedOption =
           packageSelect.options[
             packageSelect.selectedIndex
           ];
 
+
         const amount =
           Number(
-            selectedOption?.dataset.amount || 0
+            selectedOption?.dataset.amount ||
+            0
           );
 
 
@@ -3078,25 +4052,30 @@
             "customerName"
           ).value.trim();
 
+
         const phone =
           document.getElementById(
             "customerPhone"
           ).value.trim();
+
 
         const email =
           document.getElementById(
             "customerEmail"
           ).value.trim();
 
+
         const paymentMethod =
           document.getElementById(
             "paymentMethod"
           ).value;
 
+
         const transactionId =
           document.getElementById(
             "transactionId"
           ).value.trim();
+
 
         const note =
           document.getElementById(
@@ -3104,7 +4083,7 @@
           ).value.trim();
 
 
-        /* Package check */
+        /* Package */
 
         if (!packageName) {
 
@@ -3119,41 +4098,52 @@
         }
 
 
-        /* Name check */
+        /* Name */
 
-        if (customerName.length < 2) {
+        if (
+          customerName.length <
+          2
+        ) {
 
           showToast(
             "Please enter your name."
           );
 
-          document.getElementById(
-            "customerName"
-          ).focus();
+          document
+            .getElementById(
+              "customerName"
+            )
+            .focus();
 
           return;
 
         }
 
 
-        /* Phone check */
+        /* Phone */
 
-        if (!validatePhone(phone)) {
+        if (
+          !validatePhone(
+            phone
+          )
+        ) {
 
           showToast(
             "Please enter a valid Bangladesh phone number."
           );
 
-          document.getElementById(
-            "customerPhone"
-          ).focus();
+          document
+            .getElementById(
+              "customerPhone"
+            )
+            .focus();
 
           return;
 
         }
 
 
-        /* Payment check */
+        /* Payment */
 
         if (!paymentMethod) {
 
@@ -3161,16 +4151,18 @@
             "Please select payment method."
           );
 
-          document.getElementById(
-            "paymentMethod"
-          ).focus();
+          document
+            .getElementById(
+              "paymentMethod"
+            )
+            .focus();
 
           return;
 
         }
 
 
-        /* Order ID */
+        /* Generate ID */
 
         const orderId =
           generateOrderId();
@@ -3180,6 +4172,7 @@
 
         const now =
           new Date();
+
 
         const orderDate =
           now.toLocaleString(
@@ -3198,7 +4191,8 @@
 
         const order = {
 
-          id: orderId,
+          id:
+            orderId,
 
           customerName:
             customerName,
@@ -3238,38 +4232,47 @@
 
         /* Save */
 
-        saveOrder(order);
+        saveOrder(
+          order
+        );
 
 
-        /* Current order */
+        /* Current */
 
         currentOrder =
           order;
 
 
-        /* Show success */
+        /* Success */
 
         successOrderId.textContent =
           orderId;
 
-        showInvoice(order);
 
-        successBox.classList.add("show");
+        showInvoice(
+          order
+        );
+
+
+        successBox.classList.add(
+          "show"
+        );
 
 
         /* Scroll */
 
-        setTimeout(function() {
+        setTimeout(
+          function() {
 
-          successBox.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
+            successBox.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
 
-        }, 150);
+          },
+          150
+        );
 
-
-        /* Message */
 
         showToast(
           "Order submitted successfully!"
@@ -3280,7 +4283,7 @@
 
 
     /* =====================================
-       PRINT INVOICE
+       PRINT
     ===================================== */
 
     printInvoiceBtn.addEventListener(
@@ -3296,6 +4299,7 @@
           return;
 
         }
+
 
         window.print();
 
@@ -3352,7 +4356,9 @@ Thank you.`;
           "https://wa.me/" +
           WHATSAPP_NUMBER +
           "?text=" +
-          encodeURIComponent(message);
+          encodeURIComponent(
+            message
+          );
 
 
         window.open(
@@ -3372,17 +4378,25 @@ Thank you.`;
       "click",
       function() {
 
-        currentOrder = null;
+        currentOrder =
+          null;
+
 
         orderForm.reset();
 
+
         updatePackage();
+
 
         successBox.classList.remove(
           "show"
         );
 
-        document.getElementById("order")
+
+        document
+          .getElementById(
+            "order"
+          )
           .scrollIntoView({
             behavior: "smooth"
           });
@@ -3399,11 +4413,411 @@ Thank you.`;
       "click",
       function() {
 
-        setTimeout(function() {
+        setTimeout(
+          function() {
 
-          updatePackage();
+            updatePackage();
 
-        }, 50);
+          },
+          50
+        );
+
+      }
+    );
+
+
+    /* =====================================
+       TRACKING STATUS CLASS
+    ===================================== */
+
+    function getStatusClass(
+      status
+    ) {
+
+      const value =
+        String(
+          status || ""
+        ).toLowerCase();
+
+
+      if (
+        value.includes(
+          "confirmed"
+        )
+      ) {
+        return "badge-confirmed";
+      }
+
+
+      if (
+        value.includes(
+          "rejected"
+        )
+      ) {
+        return "badge-rejected";
+      }
+
+
+      if (
+        value.includes(
+          "processing"
+        )
+      ) {
+        return "badge-processing";
+      }
+
+
+      if (
+        value.includes(
+          "completed"
+        )
+      ) {
+        return "badge-completed";
+      }
+
+
+      if (
+        value.includes(
+          "cancelled"
+        )
+      ) {
+        return "badge-cancelled";
+      }
+
+
+      if (
+        value.includes(
+          "pending"
+        )
+      ) {
+        return "badge-pending";
+      }
+
+
+      return "badge-new";
+
+    }
+
+
+    /* =====================================
+       TIMELINE
+    ===================================== */
+
+    function updateTimeline(
+      status
+    ) {
+
+      const timelineNew =
+        document.getElementById(
+          "timelineNew"
+        );
+
+      const timelineProcessing =
+        document.getElementById(
+          "timelineProcessing"
+        );
+
+      const timelineCompleted =
+        document.getElementById(
+          "timelineCompleted"
+        );
+
+
+      timelineNew.className =
+        "timeline-item";
+
+
+      timelineProcessing.className =
+        "timeline-item";
+
+
+      timelineCompleted.className =
+        "timeline-item";
+
+
+      const value =
+        String(
+          status || ""
+        ).toLowerCase();
+
+
+      if (
+        value.includes(
+          "cancelled"
+        )
+      ) {
+
+        timelineNew.classList.add(
+          "done"
+        );
+
+        return;
+
+      }
+
+
+      if (
+        value.includes(
+          "completed"
+        )
+      ) {
+
+        timelineNew.classList.add(
+          "done"
+        );
+
+        timelineProcessing.classList.add(
+          "done"
+        );
+
+        timelineCompleted.classList.add(
+          "done"
+        );
+
+        return;
+
+      }
+
+
+      if (
+        value.includes(
+          "processing"
+        )
+      ) {
+
+        timelineNew.classList.add(
+          "done"
+        );
+
+        timelineProcessing.classList.add(
+          "active"
+        );
+
+        return;
+
+      }
+
+
+      timelineNew.classList.add(
+        "active"
+      );
+
+    }
+
+
+    /* =====================================
+       SHOW TRACKING
+    ===================================== */
+
+    function showTrackingOrder(
+      order
+    ) {
+
+      trackingError.classList.remove(
+        "show"
+      );
+
+
+      trackingResult.classList.add(
+        "show"
+      );
+
+
+      trackingTitle.textContent =
+        "Order " +
+        order.id;
+
+
+      trackingDate.textContent =
+        "Submitted: " +
+        order.date;
+
+
+      const orderStatus =
+        order.orderStatus ||
+        "New Order";
+
+
+      const paymentStatus =
+        order.paymentStatus ||
+        "Pending";
+
+
+      trackingStatusBadge.textContent =
+        orderStatus;
+
+
+      trackingStatusBadge.className =
+        "tracking-badge " +
+        getStatusClass(
+          orderStatus
+        );
+
+
+      document.getElementById(
+        "trackOrderIdValue"
+      ).textContent =
+        order.id;
+
+
+      document.getElementById(
+        "trackPackage"
+      ).textContent =
+        order.package;
+
+
+      document.getElementById(
+        "trackCustomer"
+      ).textContent =
+        order.customerName;
+
+
+      document.getElementById(
+        "trackAmount"
+      ).textContent =
+        formatMoney(
+          order.amount
+        );
+
+
+      document.getElementById(
+        "trackPaymentMethod"
+      ).textContent =
+        order.paymentMethod;
+
+
+      const paymentElement =
+        document.getElementById(
+          "trackPaymentStatus"
+        );
+
+
+      paymentElement.textContent =
+        paymentStatus;
+
+
+      paymentElement.style.color =
+        paymentStatus === "Confirmed"
+          ? "#027a48"
+          : paymentStatus === "Rejected"
+            ? "#b42318"
+            : "#b54708";
+
+
+      document.getElementById(
+        "trackTransaction"
+      ).textContent =
+        order.transactionId ||
+        "Not provided";
+
+
+      document.getElementById(
+        "trackOrderStatus"
+      ).textContent =
+        orderStatus;
+
+
+      updateTimeline(
+        orderStatus
+      );
+
+    }
+
+
+    /* =====================================
+       TRACK ORDER
+    ===================================== */
+
+    function trackOrder() {
+
+      const searchId =
+        trackingOrderId.value
+          .trim()
+          .toUpperCase();
+
+
+      trackingResult.classList.remove(
+        "show"
+      );
+
+
+      trackingError.classList.remove(
+        "show"
+      );
+
+
+      if (!searchId) {
+
+        trackingError.textContent =
+          "Please enter your Order ID.";
+
+        trackingError.classList.add(
+          "show"
+        );
+
+        return;
+
+      }
+
+
+      const orders =
+        getOrders();
+
+
+      const foundOrder =
+        orders.find(
+          function(order) {
+
+            return String(
+              order.id || ""
+            ).toUpperCase() ===
+            searchId;
+
+          }
+        );
+
+
+      if (!foundOrder) {
+
+        trackingError.textContent =
+          "এই Order ID-এর কোনো order পাওয়া যায়নি। Order ID সঠিকভাবে লিখে আবার চেষ্টা করুন।";
+
+        trackingError.classList.add(
+          "show"
+        );
+
+        return;
+
+      }
+
+
+      showTrackingOrder(
+        foundOrder
+      );
+
+    }
+
+
+    trackOrderBtn.addEventListener(
+      "click",
+      trackOrder
+    );
+
+
+    trackingOrderId.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key ===
+          "Enter"
+        ) {
+
+          event.preventDefault();
+
+          trackOrder();
+
+        }
 
       }
     );
@@ -3413,43 +4827,50 @@ Thank you.`;
        SMOOTH NAVIGATION
     ===================================== */
 
-    document.querySelectorAll(
-      'a[href^="#"]'
-    ).forEach(function(link) {
+    document
+      .querySelectorAll(
+        'a[href^="#"]'
+      )
+      .forEach(function(link) {
 
-      link.addEventListener(
-        "click",
-        function(event) {
+        link.addEventListener(
+          "click",
+          function(event) {
 
-          const targetId =
-            link.getAttribute("href");
-
-          if (
-            targetId &&
-            targetId !== "#"
-          ) {
-
-            const target =
-              document.querySelector(
-                targetId
+            const targetId =
+              link.getAttribute(
+                "href"
               );
 
-            if (target) {
 
-              event.preventDefault();
+            if (
+              targetId &&
+              targetId !== "#"
+            ) {
 
-              target.scrollIntoView({
-                behavior: "smooth"
-              });
+              const target =
+                document.querySelector(
+                  targetId
+                );
+
+
+              if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                  behavior: "smooth"
+                });
+
+              }
 
             }
 
           }
+        );
 
-        }
-      );
-
-    });
+      });
 
 
     /* =====================================
